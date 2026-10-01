@@ -1,0 +1,2565 @@
+# Throwaway email services Throwlist watches.
+#
+# id          the service's host
+# read        api or page: read automatically by `npm run collect`, one request a run
+#             manual: only recorded by hand (`npm run observe`), because its terms forbid
+#             automated visits, its robots.txt disallows the page, or it builds addresses in script
+# endpoint    the URL a reader fetches; json, pattern and within say where the domains are
+# robots      what robots.txt said: allowed, disallowed, none (no robots.txt) or unreachable
+# automated   what the terms say about automated visits: forbidden, not mentioned or unknown
+# status      active (domains visible), script (built in the browser), blocked (bot check
+#             or robots), or dead
+# checked     when the service was last read or reviewed
+#
+# A service whose terms forbid automated visits must stay on read: manual.
+
+- id: 027168.com
+  name: 027168.com
+  url: https://www.027168.com/
+  language: zh
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: dead
+  checked: 2026-10-01
+  notes: No response to robots.txt or the main page.
+- id: 10minemail.com
+  name: 10MinEmail
+  url: https://10minemail.com/en/
+  language: en
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: blocked
+  checked: 2026-10-01
+  notes: Main page returned a Cloudflare captcha (403). Same robots.txt as temp-mail.org.
+- id: 10minutemail.com
+  name: 10 Minute Mail (.com)
+  url: https://10minutemail.com/
+  language: en
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: blocked
+  checked: 2026-10-01
+  notes: Main page returned a Cloudflare "Just a moment" challenge (403). Stopped there.
+- id: 10minutemail.net
+  name: 10 Minute Mail (.net)
+  url: https://10minutemail.net/
+  language: en
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: active
+  checked: 2026-10-01
+  notes: Address shown in the page input (an address at laoia.com). No terms link on the page.
+- id: 10minutemail.now
+  name: 10MinuteMail.now
+  url: https://10minutemail.now/
+  language: zh
+  read: manual
+  robots: allowed
+  terms: https://10minutemail.now/en/terms-of-service
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: Multilingual site that surfaced through a Chinese search. The page served one ready-made address.
+- id: 10minutemail.one
+  name: 10MinuteMail.one
+  url: https://10minutemail.one/
+  language: en
+  read: manual
+  robots: allowed
+  terms: https://10minutemail.one/terms-of-use
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: "Two domain lists in the page: config emailDomains and the server-rendered state. Both recorded. Domains in the page's Nuxt state (emailDomains). Site says it changes the mailbox domain periodically."
+- id: 10minutemails.com
+  name: 10minutemails.com
+  url: https://10minutemails.com/
+  language: es
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: dead
+  checked: 2026-10-01
+  notes: Cloudflare 522 (origin timeout) on both requests.
+- id: 13dk.net
+  name: 13dk.net
+  url: https://13dk.net/
+  language: tr
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: dead
+  checked: 2026-10-01
+  notes: Domain is parked (script redirect to /lander).
+- id: 15minutemail.com
+  name: 15 Minute Mail
+  url: https://15minutemail.com/
+  language: en
+  read: manual
+  robots: allowed
+  terms: https://15minutemail.com/terms/
+  automated: not mentioned
+  status: script
+  checked: 2026-10-01
+  notes: Same template as temp-mail.you. No mailbox domain in the HTML.
+- id: 15qm.com
+  name: QuickMail (15qm.com)
+  url: http://15qm.com/
+  language: ja
+  read: manual
+  robots: none
+  terms: null
+  automated: unknown
+  status: script
+  checked: 2026-10-01
+  notes: 15-minute mail. The address appears only after pressing the start link, which creates a mailbox, so it was not followed. Page says the mail domain changes irregularly.
+- id: 1secmail.cc
+  name: 1SecMail.cc
+  url: https://www.1secmail.cc/en
+  read: page
+  endpoint: https://www.1secmail.cc/en
+  within: <optgroup label="Free Domains">(.*?)</optgroup>
+  pattern: <option value="([^"]+)"
+  robots: allowed
+  terms: https://www.1secmail.cc/page/Terms-Conditions
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: Successor-style site. Free domains listed in the select; five premium domains are shown masked (e.g. p*************d.com) and are excluded.
+- id: 1secmail.com
+  name: 1secmail.com
+  url: https://www.1secmail.com/
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: blocked
+  checked: 2026-10-01
+  notes: 403 on robots.txt; stopped. Widely reported as no longer working.
+- id: 1tempmail.com
+  name: 1TempMail
+  url: https://www.1tempmail.com/
+  language: en
+  read: manual
+  robots: allowed
+  terms: https://www.1tempmail.com/terms/
+  automated: forbidden
+  status: script
+  checked: 2026-10-01
+  notes: No mailbox domain in the HTML. Terms forbid using automated systems or scripts to interact with the service.
+- id: 22.do
+  name: 22.do
+  url: https://22.do/
+  language: zh
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: blocked
+  checked: 2026-10-01
+  notes: Cloudflare challenge (403) on robots.txt; stopped. Third-party README says it offers Gmail and Outlook aliases plus own domains. Cloudflare 'Attention Required' captcha on robots.txt; stopped. Known for temporary Gmail-style addresses.
+- id: 24mail.chacuo.net
+  name: 24mail (chacuo)
+  url: http://24mail.chacuo.net/
+  language: zh
+  read: manual
+  robots: none
+  terms: null
+  automated: unknown
+  status: active
+  checked: 2026-10-01
+  notes: Chinese 24-hour mailbox; domain select in page HTML. robots.txt returns the home page. No terms link. No response to robots.txt or the main page.
+- id: adressejetable.fr
+  name: Adresse Jetable
+  url: https://adressejetable.fr/
+  language: fr
+  read: manual
+  robots: allowed
+  terms: https://adressejetable.fr/conditions-utilisation
+  automated: unknown
+  status: script
+  checked: 2026-10-01
+  notes: Script-built app; terms page HTML is the same app shell, so terms text was not readable. Same operator and app as docasnyemail.cz, tymczasowyemail.pl, tijdelijkemail.nl, jednorazovyemail.sk and emailusaegetta.it (hreflang links).
+- id: adrestymczasowy.pl
+  name: AdresTymczasowy.pl
+  url: https://adrestymczasowy.pl/
+  language: pl
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: active
+  checked: 2026-10-01
+  notes: Plain page load redirects to an address on a subdomain of tml.waw.pl; list the exact host. Sister site quickalias.eu (English).
+- id: alt-emailer.com
+  name: AltMail
+  url: https://alt-emailer.com/
+  language: de
+  read: manual
+  robots: none
+  terms: null
+  automated: unknown
+  status: script
+  checked: 2026-10-01
+  notes: Canonical altmail.app. Front end over the mail.tm and mail.gw APIs; domains come from those APIs at runtime.
+- id: anonbox.net
+  name: anonbox (Chaos Computer Club)
+  url: https://anonbox.net/
+  language: de
+  read: manual
+  robots: none
+  terms: null
+  automated: unknown
+  status: active
+  checked: 2026-10-01
+  notes: Addresses are random@<daily-hash>.anonbox.net, valid until midnight of the next day; block anonbox.net including subdomains.
+- id: anonymmail.net
+  name: AnonymMail
+  url: https://anonymmail.net/pl/temporary-email
+  language: pl
+  read: manual
+  robots: allowed
+  terms: https://anonymmail.net/pl/page/terms
+  automated: forbidden
+  status: active
+  checked: 2026-10-01
+  notes: Multilingual site; page load printed an address on one domain. Terms forbid scraping without authorization.
+- id: bareidmo.netlify.app
+  name: Bareed Moaqat (bareidmo)
+  url: https://bareidmo.netlify.app/
+  language: ar
+  read: manual
+  robots: none
+  terms: null
+  automated: unknown
+  status: active
+  checked: 2026-10-01
+  notes: Arabic front end for the mail.tm API; its script reads api.mail.tm/domains, which listed one active domain. Terms link is a placeholder (#).
+- id: bccto.me
+  name: BccTo.me
+  url: https://www.bccto.me/
+  language: zh
+  read: manual
+  robots: disallowed
+  terms: null
+  automated: unknown
+  status: blocked
+  checked: 2026-10-01
+  notes: robots.txt disallows everything for *; main page not fetched. See BccTo.CC (rootsh.com).
+- id: boomlify.com
+  name: Boomlify
+  url: https://boomlify.com/
+  language: en
+  read: manual
+  robots: allowed
+  terms: https://boomlify.com/en/terms
+  automated: not mentioned
+  status: script
+  checked: 2026-10-01
+  notes: Domain picker is empty placeholder markup in the HTML; list loads by script. Domain select is a skeleton filled by script ("Auto (Rotate domains)" plus locked premium domains).
+- id: burner.kiwi
+  name: burner.kiwi
+  url: https://burner.kiwi/
+  read: manual
+  robots: none
+  terms: null
+  automated: unknown
+  status: active
+  checked: 2026-10-01
+  notes: Public instance of open-source haydenwoodhead/burner.kiwi; address shown in page HTML, inbox lasts 24 hours.
+- id: byom.de
+  name: byom.de
+  url: https://www.byom.de/
+  language: de
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: active
+  checked: 2026-10-01
+  notes: Any name @byom.de, public inbox. Only an Über/Impressum page exists and robots.txt disallows /about, so not fetched.
+- id: catchmail.io
+  name: Catchmail
+  url: https://catchmail.io/
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: active
+  checked: 2026-10-01
+  notes: Domain select in page HTML. Has a free public REST API (docs at /docs, /api/ disallowed by robots). No terms link found.
+- id: cleantempmail.com
+  name: CleanTempMail
+  url: https://cleantempmail.com/
+  language: en
+  read: manual
+  robots: allowed
+  terms: https://cleantempmail.com/terms
+  automated: not mentioned
+  status: script
+  checked: 2026-10-01
+  notes: Claims 1,539 domains; the /domains page loads its list by script and /api/ is disallowed by robots. Claims hundreds of active domains (a search snippet says 1,539). The /domains page loads its list by script and /api/ is disallowed by robots.
+- id: cloakmail.dev
+  name: CloakMail
+  url: https://cloakmail.dev/
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: script
+  checked: 2026-10-01
+  notes: Self-hosted open-source product site; no public mailbox domain shown.
+- id: codecrush.com.br
+  name: CodeCrush Email Temporário
+  url: https://codecrush.com.br/ferramentas/email-temporario
+  language: pt
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: active
+  checked: 2026-10-01
+  notes: Front end over the Guerrilla Mail API; its FAQ says the API always hands out guerrillamailblock.com. gmail.com appears only in an alias example, not as a handed-out domain.
+- id: correo-temporall.com
+  name: correo-temporall.com
+  url: https://correo-temporall.com/
+  language: es
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: script
+  checked: 2026-10-01
+  notes: React app; no domain in HTML.
+- id: correostemporales.org
+  name: Correos Temporales
+  url: https://correostemporales.org/
+  language: es
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: active
+  checked: 2026-10-01
+  notes: Single domain in the picker; the page load also printed an address on it.
+- id: correotemporal.com.mx
+  name: correotemporal.com.mx
+  url: https://correotemporal.com.mx/
+  language: es
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: dead
+  checked: 2026-10-01
+  notes: Cloudflare 521 (origin down) on both requests.
+- id: correotemporal.es
+  name: Correo Temporal (correotemporal.es)
+  url: https://correotemporal.es/
+  language: es
+  read: manual
+  robots: allowed
+  terms: https://correotemporal.es/privacidad-y-tos
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: Domain selector lists two domains.
+- id: correotemporal.org
+  name: Correo Temporal (correotemporal.org)
+  url: https://correotemporal.org/
+  language: es
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: blocked
+  checked: 2026-10-01
+  notes: Redirects to tempmail.ninja/es/, which returned a Cloudflare challenge on robots.txt; stopped.
+- id: crazymailing.com
+  name: CrazyMailing
+  url: https://crazymailing.com/
+  language: fr
+  read: manual
+  robots: allowed
+  terms: https://crazymailing.com/terms/
+  automated: forbidden
+  status: script
+  checked: 2026-10-01
+  notes: No domain in the HTML; /api/domains is disallowed by robots. Terms answer "Can I automate it? No." /fr returned 404; site is now English and Russian. Domain picker filled from /api/domains, which robots.txt disallows. Terms say explicitly that automation breaches them. Domains load by script from /api/domains, which robots.txt disallows. Terms say nothing is published as an API and scripted access breaks the terms. FAQ says registered users get extra unpublished domains.
+- id: cs.email
+  name: cs.email
+  url: https://cs.email/
+  read: page
+  endpoint: https://cs.email/
+  pattern: <option value="([^"]+)"
+  robots: none
+  terms: https://cs.email/tos
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: Runs the Guerrilla Mail software (assets served from guerrillamail.com). Domain select in the page HTML.
+- id: darkemail.school
+  name: DarkEmail
+  url: https://www.darkemail.school/
+  language: pt
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: script
+  checked: 2026-10-01
+  notes: React app; no domain in HTML. Address lasts 1 hour.
+- id: delpost.ru
+  name: Delpost
+  url: https://delpost.ru/
+  language: ru
+  read: page
+  endpoint: https://delpost.ru/ru/change
+  within: <select[^>]*name="domain">(.*?)</select>
+  pattern: <option value="([^"]+)"
+  robots: allowed
+  terms: https://delpost.ru/ru/page/faq-ru
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: 30-minute boxes. Domain select on the custom-address page. No terms page; FAQ read instead.
+- id: disposablemail.app
+  name: DisposableMail.app
+  url: https://disposablemail.app/
+  read: manual
+  robots: allowed
+  terms: https://disposablemail.app/terms
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: disposablemail.dev appears as the inbox address in the page's API example; /api/ disallowed by robots.
+- id: disposablemail.com
+  name: DisposableMail
+  url: https://www.disposablemail.com/
+  language: en
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: active
+  checked: 2026-10-01
+  notes: Same operator as fakemail.net. tempmailaddress.com appears only as a sender address. No terms link.
+- id: dispostable.com
+  name: Dispostable
+  url: https://www.dispostable.com/
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: dead
+  checked: 2026-10-01
+  notes: TLS connect error (curl exit 35); not retried.
+- id: docasnyemail.cz
+  name: Dočasný e-mail
+  url: https://docasnyemail.cz/
+  language: cs
+  read: manual
+  robots: allowed
+  terms: https://docasnyemail.cz/podminky-pouziti
+  automated: unknown
+  status: script
+  checked: 2026-10-01
+  notes: Same app and operator as adressejetable.fr; terms page is the app shell, text not readable without script.
+- id: dropmail.me
+  name: DropMail
+  url: https://dropmail.me/en/
+  language: ru
+  read: manual
+  robots: allowed
+  terms: https://dropmail.me/privacypolicy.html
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: Full domain list (including rotating domains) loads from GraphQL at /api/graphql/, which robots disallows. API docs name dropmail.me and 10mail.org as address domains. No terms page linked. Web UI fills domains by script. The API docs name dropmail.me and 10mail.org in the domains example and say some domains rotate (expiresAt). The GraphQL domains query needs a token and /api/graphql/ is disallowed by robots. No terms page; privacy policy checked. Only dropmail.me shows in the HTML; the full list of permanent and rotating domains loads by script from /api/graphql/, which robots.txt disallows. No separate terms page, so the privacy policy was read. Also offers forwarding to a real inbox.
+- id: duckmail.sbs
+  name: DuckMail
+  url: https://www.duckmail.sbs/en
+  read: api
+  endpoint: https://api.duckmail.sbs/domains
+  json: hydra:member[*].domain
+  robots: none
+  terms: null
+  automated: unknown
+  status: active
+  checked: 2026-10-01
+  notes: Open-source client with a mail.tm-compatible public API (no key). robots.txt is 404 on www and redirects to a login page on the API host. No terms link found.
+- id: email-fake.com
+  name: Email-Fake
+  url: https://email-fake.com/
+  read: manual
+  robots: allowed
+  terms: https://email-fake.com/doc/privacy-policy
+  automated: forbidden
+  status: active
+  checked: 2026-10-01
+  notes: "Same operator family as generator.email/emailfake.com/email-fake.com/tempm.com: one domain per page load from a large rotating pool; the domain lookup (/search.php) is disallowed by robots; anyone can point a domain's MX at the site to add it to the pool. Privacy page says bulk automated use is not permitted."
+- id: email.mw
+  name: Email.mw
+  url: https://email.mw/
+  language: zh
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: dead
+  checked: 2026-10-01
+  notes: No response to robots.txt or the main page. Sister site of gmail.pm.
+- id: email.tm
+  name: Email.tm
+  url: https://email.tm/
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: dead
+  checked: 2026-10-01
+  notes: TLS connect error (curl exit 35); not retried.
+- id: emailfake.com
+  name: EmailFake
+  url: https://emailfake.com/
+  language: en
+  read: page
+  endpoint: https://emailfake.com/blog/statistics-of-active-fake-email-domains
+  pattern: <li><code>([^<]+)</code></li>
+  robots: allowed
+  terms: https://emailfake.com/blog/privacy-policy
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: "Shown address on the main page uses xboxppshua.top (raw/emailfake.com/index.html). The statistics page lists five live domains and says the full list is withheld on purpose to stay off blocklists. Same operator family as generator.email/emailfake.com/email-fake.com/tempm.com: one domain per page load from a large rotating pool; the domain lookup (/search.php) is disallowed by robots; anyone can point a domain's MX at the site to add it to the pool. No terms page; privacy policy only."
+- id: emailgenerator.org
+  name: EmailGenerator.org
+  url: https://www.emailgenerator.org/en
+  language: en
+  read: manual
+  robots: allowed
+  terms: https://www.emailgenerator.org/en/page/terms-and-conditions
+  automated: not mentioned
+  status: script
+  checked: 2026-10-01
+  notes: Mentions multiple domains but none in the HTML.
+- id: emailnator.com
+  name: Emailnator
+  url: https://www.emailnator.com/
+  language: en
+  read: manual
+  robots: allowed
+  terms: https://www.emailnator.com/term-of-use
+  automated: forbidden
+  status: script
+  checked: 2026-10-01
+  hands_out_real_providers:
+    - gmail.com
+  notes: Hands out real @gmail.com addresses (dot and plus variants of a Gmail pool). Terms forbid scraping the site at scale. Hands out disposable Gmail addresses (dot/plus variants of real Gmail accounts). No own mailbox domains shown. Terms forbid scraping at scale.
+- id: emailondeck.com
+  name: EmailOnDeck
+  url: https://www.emailondeck.com/
+  language: en
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: script
+  checked: 2026-10-01
+  notes: Address issued after an hCaptcha step; no domain in the HTML. robots.txt is empty. No terms link found. Address built by script after a captcha step. robots.txt is empty.
+- id: emailqu.com
+  name: EmailQu
+  url: https://emailqu.com/
+  language: id
+  read: manual
+  robots: allowed
+  terms: https://emailqu.com/terms.html
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  hands_out_real_providers:
+    - outlook.com
+  notes: Example addresses name both domains. Also has an inbox reader for outlook.com accounts supplied as email|password|token, so outlook.com is listed as a real provider.
+- id: emailsementara.net
+  name: Email Sementara
+  url: https://emailsementara.net/
+  language: id
+  read: manual
+  robots: none
+  terms: null
+  automated: unknown
+  status: script
+  checked: 2026-10-01
+  notes: Next.js app; no domain in the HTML. Terms link is a placeholder (#).
+- id: emailtemp.org
+  name: EmailTemp.org
+  url: https://emailtemp.org/
+  read: manual
+  robots: allowed
+  terms: https://emailtemp.org/en/page/terms
+  automated: unknown
+  status: script
+  checked: 2026-10-01
+  notes: Address built by script. The terms page is disallowed by robots.txt, so it was not fetched.
+- id: emailtemporaire.com
+  name: Email Temporaire
+  url: https://emailtemporaire.com/
+  language: fr
+  read: manual
+  robots: none
+  terms: null
+  automated: unknown
+  status: active
+  checked: 2026-10-01
+  notes: Free domain group in the select holds one domain. Same TMail-style software as tempzap.com.
+- id: emailtemporanea.online
+  name: Email Temporanea (emailtemporanea.online)
+  url: https://emailtemporanea.online/
+  language: it
+  read: manual
+  robots: none
+  terms: null
+  automated: unknown
+  status: script
+  checked: 2026-10-01
+  notes: Landing page; the generator lives on emailtemporaire.com/it (see that entry).
+- id: emailtemporario.net
+  name: EmailTemporario
+  url: https://emailtemporario.net/
+  language: pt
+  read: manual
+  robots: allowed
+  terms: https://emailtemporario.net/termos-de-uso
+  automated: forbidden
+  status: active
+  checked: 2026-10-01
+  notes: Livewire snapshot lists one domain. Terms forbid bots or automated scripts that abuse or disrupt the servers.
+- id: emeil.ir
+  name: Emeil.ir
+  url: https://www.emeil.ir/
+  language: fa
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: dead
+  checked: 2026-10-01
+  notes: Billed as the first Iranian temp mail (20-minute addresses). robots.txt loaded, but the main page timed out.
+- id: etempmail.net
+  name: eTempMail
+  url: https://etempmail.net/
+  language: cs
+  read: manual
+  robots: allowed
+  terms: https://etempmail.net/terms-and-conditions
+  automated: forbidden
+  status: active
+  checked: 2026-10-01
+  notes: Multilingual (English default, /cs and others). Livewire domain list. Terms forbid scraping at scale without permission.
+- id: fake-email.pro
+  name: Fake-Email.pro
+  url: https://fake-email.pro/
+  language: en
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: blocked
+  checked: 2026-10-01
+  notes: Main page returned a Cloudflare challenge (403).
+- id: fakeemail.net
+  name: FakeEmail.net
+  url: https://fakeemail.net/
+  language: en
+  read: manual
+  robots: allowed
+  terms: https://fakeemail.net/page/terms
+  automated: forbidden
+  status: active
+  checked: 2026-10-01
+  notes: Picker lists 2 domains. gmail.com on the page is only the owner contact address. Terms forbid scraping site materials.
+- id: fakemail.net
+  name: FakeMail.net
+  url: https://www.fakemail.net/
+  language: en
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: active
+  checked: 2026-10-01
+  notes: tempmailaddress.com redirects here (merged). Same operator as minuteinbox.com and disposablemail.com. Shown domain has a zero-width character after the @. No terms link. Address is created by script; no domain in HTML. No terms link.
+- id: fakemailgenerator.com
+  name: Fake Mail Generator
+  url: https://www.fakemailgenerator.com/
+  language: en
+  read: page
+  endpoint: https://www.fakemailgenerator.com/
+  pattern: <a href="#">@([^<]+)</a>
+  robots: allowed
+  terms: https://www.fakemailgenerator.com/privacy-policy/
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: Domain menu lists 9 domains. No terms link. Domain dropdown in the page HTML. No terms page; privacy policy only.
+- id: freecustom.email
+  name: FreeCustom.Email
+  url: https://www.freecustom.email/en
+  language: en
+  read: manual
+  robots: allowed
+  terms: https://www.freecustom.email/policies/terms
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: '"Free Temp Mail Domains" section lists 6 domains. ditapi.info and fce.email appear only in decorative background text, not recorded. Terms ban automated abuse beyond API plan limits. API quickstart says the address must use a supported domain, e.g. @ditapi.info. fce.email appears only in decorative header text. A domains endpoint on api2.freecustom.email exists per third-party SDKs; not called. Terms forbid automation only beyond API rate limits.'
+- id: gecicimail.com.tr
+  name: Geçici Mail (gecicimail.com.tr)
+  url: https://gecicimail.com.tr/
+  language: tr
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: script
+  checked: 2026-10-01
+  notes: Address loaded by home.js; no domain in HTML.
+- id: generatetempemail.com
+  name: GenerateTempEmail
+  url: https://generatetempemail.com/
+  language: en
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: dead
+  checked: 2026-10-01
+  notes: Host does not resolve in DNS.
+- id: generator.email
+  name: Generator.email
+  url: https://generator.email/
+  language: en
+  read: manual
+  robots: allowed
+  terms: https://generator.email/blog/privacy-policy
+  automated: forbidden
+  status: active
+  checked: 2026-10-01
+  notes: "Same platform as emailfake.com and tempm.com: user-contributed domains that rotate; only the shown address domain is recorded. No terms page (privacy only). Same operator family as generator.email/emailfake.com/email-fake.com/tempm.com: one domain per page load from a large rotating pool; the domain lookup (/search.php) is disallowed by robots; anyone can point a domain's MX at the site to add it to the pool. No terms page; the privacy policy treats scraping as abuse. /blog/new-email-generator-domain explains adding domains, lists none."
+- id: getcorreotemporal.com
+  name: GetCorreoTemporal
+  url: https://getcorreotemporal.com/
+  language: es
+  read: manual
+  robots: allowed
+  terms: https://getcorreotemporal.com/terminos-y-condiciones/
+  automated: not mentioned
+  status: script
+  checked: 2026-10-01
+  notes: WordPress widget that creates the inbox on mail.tm at runtime; domains are mail.tm's.
+- id: getnada.net
+  name: Getnada
+  url: https://getnada.net/
+  read: page
+  endpoint: https://getnada.net/
+  within: (<select.*?</select>)
+  pattern: <option value="([^"]+)"
+  robots: allowed
+  terms: https://getnada.net/terms
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: Domain select in page HTML.
+- id: gmail.pm
+  name: Gmail.pm
+  url: https://gmail.pm/
+  language: zh
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: script
+  checked: 2026-10-01
+  notes: Domain select is empty in the HTML and filled over socket.io. Despite the name, no gmail.com address is shown. Links sister sites mails.cm and email.mw.
+- id: guerrillamail.com
+  name: Guerrilla Mail
+  url: https://www.guerrillamail.com/
+  language: en
+  read: page
+  endpoint: https://www.guerrillamail.com/
+  pattern: <option value="([^"]+)"
+  robots: none
+  terms: https://www.guerrillamail.com/tos
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: Domain picker lists 11 domains. robots.txt is 404. Terms ban over-use by repeated requests but say nothing on bots. Domain select in the page HTML. Has a public JSON API, but it opens a session/mailbox, so it was not called.
+- id: haltospam.com
+  name: HaltoSpam
+  url: https://www.haltospam.com/
+  language: fr
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: dead
+  checked: 2026-10-01
+  notes: TLS connect error (curl 35).
+- id: harakirimail.com
+  name: HarakiriMail
+  url: https://harakirimail.com/
+  language: en
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: active
+  checked: 2026-10-01
+  notes: No terms link.
+- id: hidemail.de
+  name: hidemail.de
+  url: https://www.hidemail.de/
+  language: de
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: dead
+  checked: 2026-10-01
+  notes: TLS certificate error (curl 60).
+- id: inbox-drop.com
+  name: Inbox-Drop
+  url: https://inbox-drop.com/
+  language: en
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: script
+  checked: 2026-10-01
+  notes: Address built by a Cloudflare worker; no domain in the HTML. No terms link.
+- id: inboxes.com
+  name: Inboxes.com (formerly Nada, getnada.com)
+  url: https://inboxes.com/
+  language: en
+  read: manual
+  robots: allowed
+  terms: https://inboxes.com/terms
+  automated: not mentioned
+  status: script
+  checked: 2026-10-01
+  notes: getnada.com now redirects to inboxes.com (merged here). No mailbox domain in the HTML; /api/ is disallowed by robots. Domains loaded from /api/, which robots disallows. FAQ says domains are recycled with a month's notice.
+- id: inboxkitten.com
+  name: InboxKitten
+  url: https://inboxkitten.com/
+  language: en
+  read: manual
+  robots: none
+  terms: null
+  automated: unknown
+  status: script
+  checked: 2026-10-01
+  notes: Single-page app; robots.txt returns the app HTML. No domain in the HTML. Open-source; app shell only, no domain in HTML.
+- id: indiamail.org
+  name: IndiaMail
+  url: https://www.indiamail.org/temp-mail
+  language: hi
+  read: manual
+  robots: allowed
+  terms: https://www.indiamail.org/terms
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: Page describes an instant disposable @indiamail.org inbox; English/Hindi toggle. Terms ban bot bulk registrations on third-party sites, not automated access to the site.
+- id: instanttempemail.com
+  name: InstantTempEmail
+  url: https://instanttempemail.com/
+  language: en
+  read: manual
+  robots: allowed
+  terms: https://instanttempemail.com/en/terms
+  automated: not mentioned
+  status: script
+  checked: 2026-10-01
+  notes: No mailbox domain in the HTML. Terms URL redirected to /terms.
+- id: internxt.com
+  name: Internxt Temp Mail
+  url: https://internxt.com/temporary-email
+  language: en
+  read: manual
+  robots: allowed
+  terms: https://internxt.com/legal
+  automated: not mentioned
+  status: script
+  checked: 2026-10-01
+  notes: Temp mail tool on a cloud storage company site; address built in script. Legal page has no bot or scraping clause. Address built by script.
+- id: invertexto.com
+  name: invertexto.com Gerador de Email Temporário
+  url: https://www.invertexto.com/gerador-email-temporario
+  language: pt
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: active
+  checked: 2026-10-01
+  notes: Brazilian tools site; page load shows a random address and a rename box fixed to one domain. Valid 1 hour.
+- id: jjk.app
+  name: jjk.app
+  url: https://jjk.app/
+  language: ko
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: blocked
+  checked: 2026-10-01
+  notes: Cloudflare 'Attention Required' captcha on robots.txt; stopped.
+- id: linshi-email.com
+  name: LinShi-Email
+  url: https://www.linshi-email.com/
+  language: zh
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: blocked
+  checked: 2026-10-01
+  notes: Cloudflare challenge on robots.txt; stopped.
+- id: linshi.co
+  name: Linshi.co
+  url: https://linshi.co/
+  read: manual
+  robots: none
+  terms: null
+  automated: unknown
+  status: script
+  checked: 2026-10-01
+  notes: Address built by script; robots.txt returns the home page.
+- id: linshiguge.com
+  name: LinShiGuGe
+  url: https://www.linshiguge.com/
+  language: zh
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: blocked
+  checked: 2026-10-01
+  notes: Cloudflare challenge on robots.txt; stopped. Name means 'temporary Google' mail.
+- id: linshiyou.com
+  name: LinShiYou.Com
+  url: https://linshiyou.com/
+  language: zh
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: active
+  checked: 2026-10-01
+  notes: Domain select in the HTML. Same operator as youxiang.dev. No terms page.
+- id: linshiyouxiang.net
+  name: Linshiyouxiang
+  url: https://www.linshiyouxiang.net/
+  language: zh
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: blocked
+  checked: 2026-10-01
+  notes: Cloudflare challenge (403) on robots.txt; stopped. Cloudflare 'Just a moment' challenge on robots.txt; stopped. Title advertises temporary Gmail addresses.
+- id: lisemala.com
+  name: Lisemala Workshop
+  url: https://lisemala.com/
+  language: ko
+  read: manual
+  robots: allowed
+  terms: https://lisemala.com/page/%EC%9D%B4%EC%9A%A9%EC%95%BD%EA%B4%80
+  automated: forbidden
+  status: active
+  checked: 2026-10-01
+  notes: Gamer-focused sister of with.lt; same free domains. Terms ban access by automated scripts and bots.
+- id: luxusmail.org
+  name: LuxusMail
+  url: https://luxusmail.org/
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: dead
+  checked: 2026-10-01
+  notes: DNS lookup failed (curl exit 6).
+- id: m.kuku.lu
+  name: Meruado Poipoi (m.kuku.lu)
+  url: https://m.kuku.lu/
+  language: ja
+  read: manual
+  robots: none
+  terms: null
+  automated: unknown
+  status: blocked
+  checked: 2026-10-01
+  notes: robots.txt returned 404; main page returned a Cloudflare 'Just a moment' challenge (HTTP 403). Stopped, so the domain list page /config_domain.php was not fetched.
+- id: m2u.io
+  name: m2u.io
+  url: https://m2u.io/en
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: script
+  checked: 2026-10-01
+  notes: App shell; address built by script.
+- id: mail.awsl.uk
+  name: cloudflare_temp_email demo
+  url: https://mail.awsl.uk/
+  read: manual
+  robots: none
+  terms: null
+  automated: unknown
+  status: script
+  checked: 2026-10-01
+  notes: Public demo of the open-source dreamhunter2333/cloudflare_temp_email project. /open_api/settings on the page host returned the app shell; the API runs on a separate worker host not visible in HTML.
+- id: mail.chatgpt.org.uk
+  name: GPTMail
+  url: https://mail.chatgpt.org.uk/
+  read: manual
+  robots: allowed
+  terms: https://mail.chatgpt.org.uk/terms/
+  automated: forbidden
+  status: script
+  checked: 2026-10-01
+  notes: Domains page loads its list by script; accepts user domains whose MX points to email.chatgpt.org.uk. Terms forbid scraping.
+- id: mail.cx
+  name: Mail.cx
+  url: https://mail.cx/
+  language: zh
+  read: manual
+  robots: allowed
+  terms: https://mail.cx/terms
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: Picker shows 9k3r.com selected; rest of the list loads from the API. Saved domains-*.js turned out to be API client code, not a list. Terms limit automated registration on third-party services and rate-limit abuse; no general bot ban. Only the server-rendered default domain is in HTML; other system domains load by script. Terms set rate limits and forbid scripting around them. Domain select in the HTML held one domain. Terms text closely matches mail.td's (contact at spamcage.com). Terms ban scripted rate-limit evasion and automated sign-ups on third-party sites, not automated access as such.
+- id: mail.gw
+  name: Mail.gw
+  url: https://mail.gw/en/
+  language: en
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: script
+  checked: 2026-10-01
+  notes: Same operator as mail.tm. Public API https://api.mail.gw/domains returned 502 twice; no domain in the HTML. Same platform as Mail.tm. api.mail.gw answered 502 for robots.txt, so the domains endpoint was not called.
+- id: mail.td
+  name: Mail.td
+  url: https://mail.td/
+  language: zh
+  read: api
+  endpoint: https://api.mail.td/api/domains
+  json: domains[*].domain
+  robots: allowed
+  terms: https://mail.td/legal/terms
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: Public domains endpoint on api.mail.td (no robots.txt there, 404). All listed domains are pro_only=false; qabq.com is the default. Account creation uses proof-of-work. Terms page linked but not fetched (request budget went to the API). Domain picker loads by script. Terms ban unauthorized automated sign-ups on third-party sites and enforce rate limits, but do not ban automated access as such. 7-day retention, paid API tiers.
+- id: mail.tm
+  name: Mail.tm
+  url: https://mail.tm/en/
+  language: en
+  read: api
+  endpoint: https://api.mail.tm/domains
+  json: hydra:member[*].domain
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: active
+  checked: 2026-10-01
+  notes: Documented public API lists one active public domain today (hydra:totalItems 1). No terms page linked (privacy only). Documented public API (docs.mail.tm); returned a single active domain. No terms link, only an FAQ.
+- id: mail.xiuvi.cn
+  name: XIUVI Mail
+  url: https://mail.xiuvi.cn/
+  language: zh
+  read: manual
+  robots: none
+  terms: null
+  automated: unknown
+  status: script
+  checked: 2026-10-01
+  notes: Same socket.io template as gmail.pm; domains not in the HTML.
+- id: mail10p.com
+  name: Mail10p
+  url: https://mail10p.com/
+  language: vi
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: dead
+  checked: 2026-10-01
+  notes: Main page returned Cloudflare error 522 (origin timed out).
+- id: mail123.click
+  name: mail123.click
+  url: https://mail123.click/
+  language: fr
+  read: manual
+  robots: allowed
+  terms: https://mail123.click/cgv
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: 14 domains in the home page select; the same list appears on the documented public REST API page (/api, saved as api.html). CGV cover the paid Premium plan only.
+- id: mail1a.de
+  name: Mail 1A
+  url: https://www.mail1a.de/
+  language: de
+  read: manual
+  robots: none
+  terms: https://www.mail1a.de/terms
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: Domain select; mails deleted after about 24 hours.
+- id: mail1s.net
+  name: Mail1s.net
+  url: https://mail1s.net/
+  language: vi
+  read: manual
+  robots: allowed
+  terms: https://mail1s.net/terms
+  automated: not mentioned
+  status: script
+  checked: 2026-10-01
+  notes: Domain picker is disabled in the HTML and filled by script; has API docs at /api-docs (not fetched).
+- id: mail7.app
+  name: Mail7
+  url: https://mail7.app/
+  language: en
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: script
+  checked: 2026-10-01
+  notes: Developer email-testing site (mail7.io moved here); inbox lives behind portal.mail7.app. No terms link.
+- id: mailcatch.com
+  name: MailCatch
+  url: http://mailcatch.com/en/disposable-email
+  language: en
+  read: manual
+  robots: none
+  terms: null
+  automated: unknown
+  status: active
+  checked: 2026-10-01
+  notes: The /en/disposable-email URL is 404; the root page says to use any name @mailcatch.com. No terms link.
+- id: maildrop.cc
+  name: Maildrop
+  url: https://maildrop.cc/
+  language: en
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: active
+  checked: 2026-10-01
+  notes: Any name @maildrop.cc. No terms page linked (privacy and docs only). Open-source; @maildrop.cc shown in page HTML. No terms link.
+- id: maildrop.cx
+  name: Maildrop.cx
+  url: https://maildrop.cx/
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: active
+  checked: 2026-10-01
+  notes: Web UI loads suffixes from /api/suffixes.php, disallowed by robots. API docs use 206969.xyz as the example public-domain suffix. No terms link.
+- id: mailforspam.com
+  name: MailForSpam
+  url: https://mailforspam.com/
+  language: ru
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: active
+  checked: 2026-10-01
+  notes: Page says use any @mailforspam.com address. No terms link found. No response to robots.txt or the main page.
+- id: mailgolem.com
+  name: MailGolem
+  url: https://mailgolem.com/
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: dead
+  checked: 2026-10-01
+  notes: Cloudflare 521 (origin down) on robots.txt.
+- id: mailinator.com
+  name: Mailinator
+  url: https://www.mailinator.com/
+  language: en
+  read: manual
+  robots: allowed
+  terms: https://www.mailinator.com/terms-of-use/
+  automated: forbidden
+  status: active
+  checked: 2026-10-01
+  notes: Public inboxes at any @mailinator.com name. Terms forbid "any robot, spider, scraper, or other automated or manual means to access" the service. Private domains are paid.
+- id: mailmomy.com
+  name: Mailmomy
+  url: https://mailmomy.com/
+  language: en
+  read: manual
+  robots: allowed
+  terms: https://mailmomy.com/terms
+  automated: not mentioned
+  status: script
+  checked: 2026-10-01
+  notes: No mailbox domain in the HTML.
+- id: mailnesia.com
+  name: Mailnesia
+  url: https://mailnesia.com/
+  language: en
+  read: manual
+  robots: allowed
+  terms: https://mailnesia.com/terms-of-service.html
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: Terms welcome software that uses the site but forbid one user opening a large number of mailboxes; no general bot ban.
+- id: mailpoof.com
+  name: Mail Poof
+  url: https://mailpoof.com/
+  language: en
+  read: manual
+  robots: none
+  terms: https://mailpoof.com/terms
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: Domain selector shows @mailpoof.com only. robots.txt is 404.
+- id: mails.cm
+  name: Mails.cm (Cloud Mail)
+  url: https://mails.cm/
+  language: zh
+  read: manual
+  robots: none
+  terms: null
+  automated: unknown
+  status: script
+  checked: 2026-10-01
+  notes: Cloud Mail SPA with Turnstile; no domain in the HTML. Sister site of gmail.pm.
+- id: mailsac.com
+  name: Mailsac
+  url: https://mailsac.com/
+  language: en
+  read: manual
+  robots: allowed
+  terms: https://docs.mailsac.com/en/latest/about/terms_of_service.html
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: Any address @mailsac.com is a public inbox. Developer testing service; terms require a paid licence for business use but have no bot clause.
+- id: mailslurp.com
+  name: MailSlurp Fake Email Generator
+  url: https://www.mailslurp.com/tools/fake-email-generator/
+  language: en
+  read: manual
+  robots: allowed
+  terms: https://legal.mailslurp.com/
+  automated: not mentioned
+  status: script
+  checked: 2026-10-01
+  notes: Developer email-testing platform; free 20-minute inbox tool builds the address in script.
+- id: mailtemp.net
+  name: MailTemp.net
+  url: https://mailtemp.net/
+  read: manual
+  robots: allowed
+  terms: https://mailtemp.net/terms-of-use
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: Domains in the page's Livewire state ("domains":[...]).
+- id: mailtemp.uk
+  name: MailTemp UK
+  url: https://mailtemp.uk/
+  language: en
+  read: page
+  endpoint: https://mailtemp.uk/
+  within: "&quot;domains&quot;:\\[(.*?)\\]"
+  pattern: "&quot;([^&]+)&quot;"
+  robots: allowed
+  terms: https://mailtemp.uk/terms-and-conditions
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: Domain list from the page state.
+- id: mailticking.com
+  name: MailTicking
+  url: https://www.mailticking.com/
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: blocked
+  checked: 2026-10-01
+  notes: Cloudflare challenge (403) on robots.txt; stopped.
+- id: mailto.plus
+  name: mailto.plus
+  url: https://mailto.plus/
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: dead
+  checked: 2026-10-01
+  notes: Web host fails TLS (certificate error, curl exit 60). mailto.plus is the default mailbox domain of TempMail.plus and is listed there.
+- id: mailwave.dev
+  name: MailWave
+  url: https://mailwave.dev/
+  language: en
+  read: page
+  endpoint: https://mailwave.dev/
+  within: <optgroup label="Free Domains">(.*?)</optgroup>
+  pattern: <option value="([^"]+)"
+  robots: allowed
+  terms: https://mailwave.dev/page/terms-and-conditions
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: Picker lists 11 domains, including notatka.edu.pl. Terms ban bulk or automated registration only.
+- id: mikiya-webdesign.com
+  name: Sute Meado (mikiya-webdesign.com)
+  url: https://mikiya-webdesign.com/email/
+  language: ja
+  read: manual
+  robots: allowed
+  terms: https://mikiya-webdesign.com/privacy-policy/
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: The plain page load came with an address at uberip.com, the same domain mail.tm's API lists, so it likely runs on mail.tm. A mailbox password in the saved HTML was redacted. Only a privacy policy exists.
+- id: minuteinbox.com
+  name: MinuteInbox
+  url: https://www.minuteinbox.com/
+  language: en
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: active
+  checked: 2026-10-01
+  notes: Same operator as fakemail.net and disposablemail.com. Shown domain has a zero-width character after the @ (anti-copy). No terms link. Domain shown in the address field HTML. No terms link found.
+- id: mjj.cm
+  name: mjj.cm
+  url: https://mjj.cm/
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: dead
+  checked: 2026-10-01
+  notes: DNS lookup failed (curl exit 6).
+- id: moakt.com
+  name: Moakt
+  url: https://moakt.com/en/
+  language: ar
+  read: manual
+  robots: allowed
+  terms: https://moakt.com/en/terms
+  automated: forbidden
+  status: active
+  checked: 2026-10-01
+  notes: Picker lists 14 domains. Terms forbid "any robot, spider, scraper, or other automated or manual means". Domain select in the page HTML. Terms forbid robots, spiders and scrapers. Arabic-origin service, 1-hour addresses. Domain select in the HTML. Terms ban robots, spiders and scrapers.
+- id: moaktmail.com
+  name: MoaktMail
+  url: https://www.moaktmail.com/ar
+  language: ar
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: blocked
+  checked: 2026-10-01
+  notes: Bot check on robots.txt; stopped.
+- id: moemail.app
+  name: MoeMail
+  url: https://moemail.app/
+  read: manual
+  robots: allowed
+  terms: https://moemail.app/en/terms
+  automated: not mentioned
+  status: script
+  checked: 2026-10-01
+  notes: Public instance of open-source beilunyang/moemail; domains load by script, API needs a key.
+- id: mohmal.com
+  name: Mohmal
+  url: https://www.mohmal.com/en
+  language: ar
+  read: page
+  endpoint: https://www.mohmal.com/en
+  within: <select name="domain">(.*?)</select>
+  pattern: <option value="([^"]+)"
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: active
+  checked: 2026-10-01
+  notes: Domain picker lists 6 domains. No terms link. Domain select in the page HTML; site says it changes domains periodically. No terms link found. First Arabic temp mail; 45-minute addresses. Domain select in the HTML. No terms link on the page.
+- id: mohmalmail.com
+  name: MohmalMail
+  url: https://www.mohmalmail.com/ar
+  language: ar
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: blocked
+  checked: 2026-10-01
+  notes: Bot check (hcdn) on robots.txt; stopped.
+- id: mohmol.org
+  name: Mohmol
+  url: https://mohmol.org/
+  language: ar
+  read: manual
+  robots: allowed
+  terms: https://mohmol.org/terms.html
+  automated: forbidden
+  status: active
+  checked: 2026-10-01
+  notes: Domain dropdown holds only mohmol.org. Terms ban heavy automated data pulling.
+- id: mtempmail.com
+  name: MTempMail
+  url: https://mtempmail.com/
+  language: en
+  read: manual
+  robots: allowed
+  terms: https://mtempmail.com/page/terms-and-conditions
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: Picker lists 3 domains, including an .edu.pl domain. Domain select in page HTML. Documents a public-key domains endpoint, but robots.txt disallows /api/, so it was not called.
+- id: muellmail.com
+  name: Müllmail
+  url: https://muellmail.com/
+  language: de
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: active
+  checked: 2026-10-01
+  notes: Cloudflare 'Attention Required' block on muellmail.com. wegwerfemail.de redirects to muellmail.com/#/@wegwerfemail.de (recorded in the request log), so wegwerfemail.de is a Müllmail mailbox domain. Full domain list not readable.
+- id: mytemp.email
+  name: myTemp.email
+  url: https://mytemp.email/
+  language: en
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: dead
+  checked: 2026-10-01
+  notes: robots.txt returned Cloudflare error 522 (origin unreachable); nothing else fetched. Cloudflare 522 (origin not answering) on robots.txt.
+- id: nincsmail.hu
+  name: nincsmail.hu
+  url: https://nincsmail.hu/
+  language: hu
+  read: manual
+  robots: disallowed
+  terms: null
+  automated: unknown
+  status: blocked
+  checked: 2026-10-01
+  notes: "robots.txt ends with User-agent: * Disallow: /; home page not fetched. Reportedly needs a username registration."
+- id: nospamfor.us
+  name: nospamfor.us
+  url: https://nospamfor.us/
+  language: fr
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: dead
+  checked: 2026-10-01
+  notes: TLS connect error (curl 35). A French listicle says it used nospamfor.us and nospam4.us; not verified.
+- id: onetime-mail.com
+  name: Onetime Mail
+  url: https://www.onetime-mail.com/
+  language: ja
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: script
+  checked: 2026-10-01
+  notes: 7-day addresses issued by a button that creates a mailbox; no domain in the HTML. Run by Tokonet (non-profit).
+- id: openinbox.io
+  name: OpenInbox
+  url: https://openinbox.io/
+  language: en
+  read: manual
+  robots: allowed
+  terms: https://openinbox.io/terms
+  automated: not mentioned
+  status: script
+  checked: 2026-10-01
+  notes: No mailbox domain in the HTML (only the support address). Terms mention fair use for automated volume. Address built by script. Has API docs (api.openinbox.io); terms allow automation under fair use.
+- id: outlook.tw
+  name: Outlook.tw
+  url: https://outlook.tw/
+  language: zh
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: script
+  checked: 2026-10-01
+  notes: SPA with captcha; no address domain in the HTML. Name suggests Outlook addresses, but none are shown.
+- id: post-shift.ru
+  name: Post-Shift
+  url: https://post-shift.ru/
+  language: ru
+  read: manual
+  robots: allowed
+  terms: https://post-shift.ru/faq/?lang=ru
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: Changelog on the main page names the two selectable domains. 10-minute boxes. Offers a documented API at /api.php (disallowed in robots.txt). No terms page; FAQ read instead.
+- id: reusable.email
+  name: Reusable.Email
+  url: https://reusable.email/
+  language: en
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: blocked
+  checked: 2026-10-01
+  notes: Main page returned a Cloudflare challenge (403).
+- id: rootsh.com
+  name: BccTo.CC
+  url: https://rootsh.com/
+  language: zh
+  read: manual
+  robots: allowed
+  terms: https://rootsh.com/about
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: Successor of bccto.me. Domain list in the page holds only bccto.cc; users can also point their own MX at it. No terms page; about page read.
+- id: rotatemail.com
+  name: Rotate Mail
+  url: https://rotatemail.com/
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: dead
+  checked: 2026-10-01
+  notes: TLS connect error (curl exit 35); not retried. Described as rotating 1,000 new domains every 30 days.
+- id: ruu.kr
+  name: ruu.kr
+  url: https://ruu.kr/
+  language: ko
+  read: manual
+  robots: allowed
+  terms: https://ruu.kr/company_provision.jsp
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: Domain select holds ruu.kr and copyhome.win. The page's expiry list marks copyhome.win and iralborz.bid expired 2024-09-30 and kumli.racing expired 2024-01-31; the last two are left out. Running since 2011.
+- id: sandvpn.com
+  name: SandVPN Temp Mail
+  url: https://sandvpn.com/mailbox
+  language: es
+  read: manual
+  robots: allowed
+  terms: https://sandvpn.com/terms
+  automated: not mentioned
+  status: script
+  checked: 2026-10-01
+  notes: VPN vendor's temp inbox page (multilingual, English default, /es/mailbox exists); address built in script.
+- id: shenfendaquan.com
+  name: ShenFenDaQuan Temp Mail
+  url: https://www.shenfendaquan.com/mail/
+  language: zh
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: active
+  checked: 2026-10-01
+  notes: Domain shown in the page and in its inline config. No terms page.
+- id: shorttimemail.com
+  name: ShortTimeMail
+  url: https://shorttimemail.com/
+  language: zh
+  read: manual
+  robots: disallowed
+  terms: null
+  automated: unknown
+  status: blocked
+  checked: 2026-10-01
+  notes: robots.txt disallows everything for *; main page not fetched. Listed as a 30-minute mailbox.
+- id: sinnlos-mail.de
+  name: sinnlos-mail.de
+  url: https://www.sinnlos-mail.de/
+  language: de
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: dead
+  checked: 2026-10-01
+  notes: TLS certificate error (curl 60).
+- id: smail.pw
+  name: smail.pw
+  url: https://smail.pw/
+  read: manual
+  robots: allowed
+  terms: https://smail.pw/terms
+  automated: not mentioned
+  status: script
+  checked: 2026-10-01
+  notes: Address built by script; /api/ disallowed by robots.
+- id: smailpro.com
+  name: SmailPro
+  url: https://smailpro.com/
+  language: vi
+  read: manual
+  robots: allowed
+  terms: https://smailpro.com/terms
+  automated: forbidden
+  status: active
+  checked: 2026-10-01
+  hands_out_real_providers:
+    - gmail.com
+    - outlook.com
+  notes: Hands out real @gmail.com and @outlook.com addresses from an account pool, plus its own domains. Terms forbid scraping or automated extraction of the Gmail/Outlook pool. Main product is temporary Gmail and Outlook addresses from rotating real accounts; page also names its own domains (says 20+, retired after 1-2 years). Terms forbid scraping and automated pool exhaustion. Hands out rotating addresses on real gmail.com and outlook.com accounts (pool of thousands). Terms ban scraping without an API key and automated pool exhaustion.
+- id: smsboxbd.email
+  name: SMS Box BD Mail
+  url: https://smsboxbd.email/
+  language: bn
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: blocked
+  checked: 2026-10-01
+  notes: Bot check (hcdn) on robots.txt; stopped. Search title claims 8000+ domains.
+- id: snaper24.com
+  name: Snaper24
+  url: https://snaper24.com/
+  language: ko
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: script
+  checked: 2026-10-01
+  notes: Single-page app; no domain in the HTML.
+- id: snapmail.cc
+  name: Snapmail
+  url: https://www.snapmail.cc/
+  language: zh
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: script
+  checked: 2026-10-01
+  notes: AngularJS app (zh/ja/en); no domain in the HTML. FAQ page fetched as the fourth request names no mailbox domain. No terms page found.
+- id: snapmail.in
+  name: SnapMail.in
+  url: https://www.snapmail.in/
+  language: hi
+  read: manual
+  robots: allowed
+  terms: https://www.snapmail.in/terms
+  automated: not mentioned
+  status: script
+  checked: 2026-10-01
+  notes: 5-minute to 1-hour inboxes; domain not in the HTML.
+- id: sofort-mail.de
+  name: Sofort-Mail
+  url: https://www.sofort-mail.de/
+  language: de
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: dead
+  checked: 2026-10-01
+  notes: TLS connect error (curl 35) on both requests.
+- id: spambox.xyz
+  name: Spambox
+  url: https://spambox.xyz/
+  read: manual
+  robots: allowed
+  terms: https://spambox.xyz/tos
+  automated: forbidden
+  status: active
+  checked: 2026-10-01
+  notes: Domains in the page's Livewire state. Terms forbid scraping.
+- id: spamfree24.org
+  name: spamfree24.org
+  url: https://www.spamfree24.org/
+  language: de
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: dead
+  checked: 2026-10-01
+  notes: TLS connect error (curl 35).
+- id: spoofmail.de
+  name: spoofmail.de
+  url: https://spoofmail.de/
+  language: de
+  read: manual
+  robots: allowed
+  terms: https://spoofmail.de/nutzungsbedingungen
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: Domain select on the home page.
+- id: squizzy.de
+  name: squizzy.de
+  url: https://squizzy.de/
+  language: de
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: dead
+  checked: 2026-10-01
+  notes: TLS certificate error (curl 60) on both requests.
+- id: sute.jp
+  name: sute.jp
+  url: https://sute.jp/
+  language: ja
+  read: manual
+  robots: none
+  terms: https://sute.jp/page/rule
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: 24-hour addresses at @sute.jp.
+- id: temp-email.dreamhunter2333.xyz
+  name: Cloudflare Temp Email demo
+  url: https://temp-email.dreamhunter2333.xyz/
+  language: zh
+  read: manual
+  robots: none
+  terms: null
+  automated: unknown
+  status: script
+  checked: 2026-10-01
+  notes: Redirects to mail.awsl.uk, a demo of the open-source cloudflare_temp_email project. SPA with Turnstile; no domain in the HTML.
+- id: temp-inbox.me
+  name: Temp-Inbox.me
+  url: https://temp-inbox.me/
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: active
+  checked: 2026-10-01
+  notes: "Free domains from the select. Pro-only (disabled) options excluded: texify.online, vumi.xyz, temp-inbox.me, inboxvia.online, nexmaila.xyz, vumi.rest, plumdrop.live. No terms link found."
+- id: temp-mail.app
+  name: Temp-Mail.app
+  url: https://temp-mail.app/
+  language: zh
+  read: manual
+  robots: allowed
+  terms: https://temp-mail.app/legal/terms
+  automated: forbidden
+  status: active
+  checked: 2026-10-01
+  notes: Domain taken from the FAQ text, which gives an address at temp-mail.app as the address format; a search snippet claims 10+ domains, but no others are in the HTML. Terms ban frequent access by automated scripts without written permission.
+- id: temp-mail.id
+  name: Temp Mail ID
+  url: https://temp-mail.id/
+  language: es
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: blocked
+  checked: 2026-10-01
+  notes: Cloudflare 'Just a moment' challenge (403) on the home page.
+- id: temp-mail.io
+  name: Temp-Mail.io
+  url: https://temp-mail.io/en
+  language: en
+  read: manual
+  robots: allowed
+  terms: https://temp-mail.io/terms-of-service
+  automated: forbidden
+  status: script
+  checked: 2026-10-01
+  notes: Address comes from an undocumented internal API (api.internal.temp-mail.io), not used. Terms say to access Temp Mail data only through its own products (website, extensions, Telegram bot), with no explicit bot clause. Address built by script. Terms say data may be accessed only through Temp Mail's own products.
+- id: temp-mail.it
+  name: TempMail (temp-mail.it)
+  url: https://temp-mail.it/
+  language: it
+  read: manual
+  robots: none
+  terms: https://temp-mail.it/terminiecondizioni.html
+  automated: not mentioned
+  status: script
+  checked: 2026-10-01
+  notes: Address built by app.js; no domain in HTML.
+- id: temp-mail.lol
+  name: Temp-Mail.lol
+  url: https://temp-mail.lol/
+  read: manual
+  robots: allowed
+  terms: https://temp-mail.lol/terms
+  automated: not mentioned
+  status: script
+  checked: 2026-10-01
+  notes: Address built by script; only the support address appears in HTML.
+- id: temp-mail.now
+  name: Temp-Mail.now
+  url: https://temp-mail.now/
+  read: manual
+  robots: allowed
+  terms: https://temp-mail.now/en/privacy-policy
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: Address shown in the page HTML. No terms page; privacy policy checked.
+- id: temp-mail.org
+  name: Temp-Mail.org
+  url: https://temp-mail.org/en/
+  language: en
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: blocked
+  checked: 2026-10-01
+  notes: Main page returned a Cloudflare captcha (403, "Attention Required"). Stopped there. Cloudflare challenge (403) on the main page; stopped.
+- id: temp-mail.ru
+  name: Temp-Mail.ru (now Mail.tm)
+  url: https://temp-mail.ru/
+  language: ru
+  read: manual
+  robots: none
+  terms: null
+  automated: unknown
+  status: active
+  checked: 2026-10-01
+  notes: temp-mail.ru now redirects to mail.tm/en/. Domain taken from mail.tm's public API, which listed one active domain. Mail.tm is an international service.
+- id: temp-mail.se
+  name: Temp-Mail.se
+  url: https://temp-mail.se/
+  language: sv
+  read: manual
+  robots: allowed
+  terms: https://temp-mail.se/villkor/
+  automated: forbidden
+  status: script
+  checked: 2026-10-01
+  notes: Address built in script. Terms forbid bots or scripts for mass address creation or overloading. Mails deleted after 10 minutes.
+- id: temp-mail.us
+  name: Temp-Mail.us
+  url: https://temp-mail.us/en/
+  language: en
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: active
+  checked: 2026-10-01
+  notes: Shown address uses fosil.pro. No terms link.
+- id: temp-mail.you
+  name: Temp-Mail.you
+  url: https://temp-mail.you/
+  language: en
+  read: manual
+  robots: allowed
+  terms: https://temp-mail.you/terms/
+  automated: not mentioned
+  status: script
+  checked: 2026-10-01
+  notes: Same template as 15minutemail.com. No mailbox domain in the HTML.
+- id: temp.tf
+  name: temp.tf
+  url: https://temp.tf/
+  language: en
+  read: manual
+  robots: allowed
+  terms: https://temp.tf/terms
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  hands_out_real_providers:
+    - outlook.com
+    - hotmail.com
+    - gmail.com
+  notes: Domain checkboxes offer outlook.com, hotmail.com and gmail.com (real providers) plus high.edu.pl. Terms ban heavy automated abuse of the API only.
+- id: tempail.com
+  name: Tempail
+  url: https://tempail.com/en/
+  language: tr
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: active
+  checked: 2026-10-01
+  notes: Confirms the known example necub.com in the shown address. No terms page linked. Address shown in page HTML; confirms the known example necub.com. No terms link found. reCAPTCHA 'Verifying your request' page; stopped.
+- id: tempemail.cc
+  name: TempEmail.cc
+  url: https://www.tempemail.cc/
+  language: en
+  read: manual
+  robots: allowed
+  terms: https://www.tempemail.cc/privacy-policy
+  automated: not mentioned
+  status: script
+  checked: 2026-10-01
+  notes: No mailbox domain in the HTML; no terms link (privacy only). Address built by script. No terms page; privacy policy checked.
+- id: tempfastmail.com
+  name: TempFastMail
+  url: https://tempfastmail.com/
+  read: manual
+  robots: allowed
+  terms: https://tempfastmail.com/privacy-policy
+  automated: not mentioned
+  status: script
+  checked: 2026-10-01
+  notes: Demo of open-source kasteckis/TempFastMail; address built by script. No terms page; privacy policy checked.
+- id: tempgbox.net
+  name: TempGBox
+  url: https://tempgbox.net/
+  language: en
+  read: manual
+  robots: allowed
+  terms: https://tempgbox.net/terms
+  automated: not mentioned
+  status: script
+  checked: 2026-10-01
+  notes: Advertises "Gmail-compatible" and "Real Gmail inbox" temp addresses, but no domain (gmail.com or other) appears as a handed-out address in the HTML.
+- id: tempinbox.com
+  name: TempInbox.com
+  url: https://tempinbox.com/
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: dead
+  checked: 2026-10-01
+  notes: DNS lookup failed (curl exit 6).
+- id: tempinbox.dev
+  name: TempInbox
+  url: https://tempinbox.dev/de/temporaere-email
+  language: de
+  read: manual
+  robots: allowed
+  terms: https://tempinbox.dev/de/policies/terms
+  automated: forbidden
+  status: script
+  checked: 2026-10-01
+  notes: Address built in script, no domain in HTML. Terms forbid service-disrupting scraping. Inbox has no fixed time limit.
+- id: tempinbox.xyz
+  name: Tempinbox.xyz
+  url: https://www.tempinbox.xyz/
+  language: en
+  read: manual
+  robots: allowed
+  terms: https://www.tempinbox.xyz/terms
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: Domain list from the page state (same TMail script as mailtemp.uk and tempumail.com).
+- id: tempm.com
+  name: TempM
+  url: https://tempm.com/
+  language: zh
+  read: manual
+  robots: allowed
+  terms: https://tempm.com/posts/privacy-policy
+  automated: forbidden
+  status: active
+  checked: 2026-10-01
+  notes: "Same platform as emailfake.com; only the shown address domain is recorded. No terms page. Same operator family as generator.email/emailfake.com/email-fake.com/tempm.com: one domain per page load from a large rotating pool; the domain lookup (/search.php) is disallowed by robots; anyone can point a domain's MX at the site to add it to the pool. Privacy page forbids hammering the service with automated requests. English UI, listed in Chinese roundups. Page shows one current domain in a generator-style domain switcher. Policy page bans hammering the service with automated requests."
+- id: tempmail.adguard.com
+  name: AdGuard Temp Mail
+  url: https://tempmail.adguard.com/
+  language: en
+  read: manual
+  robots: disallowed
+  terms: null
+  automated: unknown
+  status: blocked
+  checked: 2026-10-01
+  notes: robots.txt disallows everything for all agents, so no page was fetched. Recorded as blocked by robots, not by a bot check. robots.txt disallows everything for all agents, so the page was not fetched. Advertises multiple domains.
+- id: tempmail.cloud
+  name: TempMail Cloud
+  url: https://tempmail.cloud/
+  read: manual
+  robots: allowed
+  terms: https://tempmail.cloud/terms
+  automated: forbidden
+  status: script
+  checked: 2026-10-01
+  notes: Public domain directory page loads its list by script; /api/ disallowed. Mailboxes are password-protected and do not expire. Terms forbid scraping.
+- id: tempmail.cn
+  name: TempMail.cn
+  url: https://tempmail.cn/
+  language: zh
+  read: manual
+  robots: allowed
+  terms: https://tempmail.cn/about.html
+  automated: not mentioned
+  status: script
+  checked: 2026-10-01
+  notes: Domain comes from script (falls back to the site hostname). No terms page; the about page has no usage rules. Open-source MeteorMail; the address domain is set by script. About page invites API use and lets people point their own domain at mx.tempmail.cn.
+- id: tempmail.co
+  name: TempMail.co
+  url: https://www.tempmail.co/
+  read: manual
+  robots: allowed
+  terms: https://www.tempmail.co/terms
+  automated: not mentioned
+  status: script
+  checked: 2026-10-01
+  notes: Says addresses come from a rotating pool of aged domains. HTML only shows a masked placeholder (·······@tempmail.co) before script runs, not counted.
+- id: tempmail.dev
+  name: TempMail.dev
+  url: https://tempmail.dev/
+  language: en
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: dead
+  checked: 2026-10-01
+  notes: Main page is a parked-domain redirect to /lander.
+- id: tempmail.ee
+  name: TempMail.ee
+  url: https://tempmail.ee/
+  read: manual
+  robots: allowed
+  terms: https://tempmail.ee/privacy-policy
+  automated: not mentioned
+  status: script
+  checked: 2026-10-01
+  notes: Address built by script; 60-minute mailboxes. No terms page; privacy policy checked.
+- id: tempmail.email
+  name: TempMail.email
+  url: https://tempmail.email/
+  read: manual
+  robots: allowed
+  terms: https://tempmail.email/terms/
+  automated: not mentioned
+  status: script
+  checked: 2026-10-01
+  notes: Address built by script; no domain in HTML.
+- id: tempmail.fish
+  name: TempMail.fish
+  url: https://tempmail.fish/
+  read: manual
+  robots: allowed
+  terms: https://tempmail.fish/terms
+  automated: not mentioned
+  status: script
+  checked: 2026-10-01
+  notes: Address built by script.
+- id: tempmail.fyi
+  name: TempMail.fyi
+  url: https://tempmail.fyi/
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: dead
+  checked: 2026-10-01
+  notes: Cloudflare 522 (origin not answering) on robots.txt.
+- id: tempmail.ing
+  name: TempMail.ing
+  url: https://tempmail.ing/
+  language: ro
+  read: manual
+  robots: allowed
+  terms: https://tempmail.ing/terms.html
+  automated: forbidden
+  status: script
+  checked: 2026-10-01
+  notes: Address built by script. Terms forbid spidering, crawling and scraping. Multilingual; address built in script. Lifetime selectable from 5 minutes to 1 hour.
+- id: tempmail.io.vn
+  name: TempMail.io.vn
+  url: https://tempmail.io.vn/
+  language: vi
+  read: page
+  endpoint: https://tempmail.io.vn/
+  within: <select id="domain">(.*?)</select>
+  pattern: <option value="([^"]+)"
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: active
+  checked: 2026-10-01
+  notes: Domain select in the HTML. Several domains carry clinic-style names. No terms page.
+- id: tempmail.la
+  name: TempMail.la
+  url: https://tempmail.la/
+  language: zh
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: dead
+  checked: 2026-10-01
+  notes: No response to robots.txt or the main page.
+- id: tempmail.lol
+  name: TempMail.lol
+  url: https://tempmail.lol/en/
+  language: en
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: script
+  checked: 2026-10-01
+  notes: Single-page app; no domain in the HTML. Single-page app shell; domains only via its API (inbox creation), not called. No terms link in the shell.
+- id: tempmail.net
+  name: TempMail.net
+  url: https://tempmail.net/
+  language: tr
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: active
+  checked: 2026-10-01
+  notes: Turkish-run site (also /tr, /ru, /ua). Page load printed an address on one domain; other domains may rotate.
+- id: tempmail.ninja
+  name: TempMail Ninja
+  url: https://tempmail.ninja/
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: blocked
+  checked: 2026-10-01
+  notes: Cloudflare challenge (403) on robots.txt; stopped.
+- id: tempmail.plus
+  name: TempMail.plus
+  url: https://tempmail.plus/en/
+  language: ru
+  read: page
+  endpoint: https://tempmail.plus/en/
+  pattern: class="dropdown-item">([^<]+)<
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: active
+  checked: 2026-10-01
+  notes: Domain dropdown lists 9 domains. No terms page linked. Domain dropdown in the page HTML; mailto.plus is the default. No terms link found. Domain menu is in the page HTML. No terms page; privacy text is an in-page panel.
+- id: tempmail.ro
+  name: TempMail.ro
+  url: https://tempmail.ro/
+  language: ro
+  read: manual
+  robots: allowed
+  terms: https://tempmail.ro/terms
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: Addresses on @tempmail.ro, no account, 1 free address a day, deleted after 30 days.
+- id: tempmail.so
+  name: TempMail.so
+  url: https://tempmail.so/
+  language: en
+  read: manual
+  robots: allowed
+  terms: https://tempmail.so/us/terms
+  automated: forbidden
+  status: active
+  checked: 2026-10-01
+  notes: Initial inbox data in the page uses draughtier.com. Terms forbid scraping. Initial inbox address in page script state. Terms forbid scraping.
+- id: tempmail.us.com
+  name: TempMail.us.com
+  url: https://tempmail.us.com/
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: dead
+  checked: 2026-10-01
+  notes: TLS connect error (curl exit 35); not retried.
+- id: tempmailbox.net
+  name: TempMailBox.net
+  url: https://tempmailbox.net/
+  read: manual
+  robots: allowed
+  terms: https://tempmailbox.net/terms/
+  automated: forbidden
+  status: script
+  checked: 2026-10-01
+  notes: Domain select is filled by script from /api/domains, which robots.txt disallows. Terms say no API exists and forbid scripting and scraping; domains last months.
+- id: tempmailc.com
+  name: TempMailC
+  url: https://tempmailc.com/
+  read: manual
+  robots: allowed
+  terms: https://tempmailc.com/terms
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: kojoball.email and domsr.fun from the domain select; kortazo.email from the public API example on the page. A 'Multi-Inbox Suite' mentions dormzs.com, deiras.com and comenstr.com under a usage quota (not counted). Terms forbid only DoS/brute-force automation.
+- id: tempmailo.com
+  name: Tempmailo
+  url: https://tempmailo.com/
+  language: en
+  read: manual
+  robots: allowed
+  terms: https://tempmailo.com/terms
+  automated: not mentioned
+  status: script
+  checked: 2026-10-01
+  notes: No domain in the HTML. Terms ban reverse engineering only. Address built by script.
+- id: tempmailspot.com
+  name: TempMailSpot
+  url: https://tempmailspot.com/
+  language: en
+  read: manual
+  robots: allowed
+  terms: https://tempmailspot.com/terms
+  automated: forbidden
+  status: active
+  checked: 2026-10-01
+  notes: Only a masked placeholder address (•••@tempmailspot.com) shows before generation; FAQ says new addresses may land on other domains. Terms forbid automated systems outside the documented API.
+- id: tempmailto.online
+  name: TempMailTo.online
+  url: https://tempmailto.online/
+  language: zh
+  read: manual
+  robots: allowed
+  terms: https://tempmailto.online/privacy/privacy.html
+  automated: not mentioned
+  status: script
+  checked: 2026-10-01
+  notes: Open-source project by a Chinese developer (github zhugezifang/Temporary-Email); the page loads js/config.js and js/api.js, which were not fetched. Only a privacy page exists.
+- id: tempomail.id
+  name: TempoMail
+  url: https://tempomail.id/
+  language: id
+  read: manual
+  robots: allowed
+  terms: https://tempomail.id/en/terms
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: 48-hour retention.
+- id: temporarymail.com
+  name: TemporaryMail.com
+  url: https://temporarymail.com/en/
+  language: en
+  read: manual
+  robots: allowed
+  terms: https://temporarymail.com/terms-of-service/
+  automated: not mentioned
+  status: script
+  checked: 2026-10-01
+  notes: Address is built in script (engine.js); no domain in the HTML and /api/ is disallowed by robots. The known example allfreemail.net could not be confirmed from saved files. Domain select ("Free Domains") is empty in HTML and filled from /api/, which robots disallows. The known example allfreemail.net could not be confirmed from saved content.
+- id: tempr.email
+  name: Tempr.email
+  url: https://tempr.email/en/
+  language: de
+  read: manual
+  robots: allowed
+  terms: https://tempr.email/en/terms.htm
+  automated: forbidden
+  status: active
+  checked: 2026-10-01
+  notes: German operator (appfield.net, Chemnitz), English UI. discard.email redirects here. Picker lists 62 domains, many on free dynamic-DNS subdomains. Terms page body is loaded by script, so the text could not be read. Domain select in page HTML (62 options; page text says 61). Many are community-added subdomains of dynamic-DNS hosts. '(PW)' marks domains where a registered user may password-protect a mailbox; all are open to anyone. German terms forbid automated reading/scraping without consent. Domain select on the home page. spambog.com and discard.email now redirect to tempr.email. Many entries are user-added subdomains on dynamic-DNS zones (cloudns, dnsabr, dns-cloud); list them as exact hostnames, never the parent zone. Terms forbid automated reading/scraping without consent.
+- id: tempumail.com
+  name: TempuMail
+  url: https://tempumail.com/
+  language: en
+  read: page
+  endpoint: https://tempumail.com/
+  within: "&quot;domains&quot;:\\[\\[(.*?)\\]"
+  pattern: "&quot;([^&]+)&quot;"
+  robots: allowed
+  terms: https://tempumail.com/terms
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: Domain list from the page state; includes .edu.pl and free subdomain hosts.
+- id: tempzap.com
+  name: TempZap
+  url: https://tempzap.com/
+  language: hu
+  read: manual
+  robots: allowed
+  terms: https://tempzap.com/page/terms-and-conditions
+  automated: forbidden
+  status: active
+  checked: 2026-10-01
+  notes: English-default site found by Hungarian search. Three free domains; four masked premium domains not listed. Terms forbid scripts or automated tools that generate many addresses.
+- id: throwawaymail.app
+  name: ThrowawayMail.app
+  url: https://throwawaymail.app/
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: script
+  checked: 2026-10-01
+  notes: Domain assigned at mailbox creation (POST /api/mailboxes); llms.txt documents the API but lists no domains. No terms link.
+- id: throwawaymail.com
+  name: ThrowAwayMail
+  url: https://www.throwawaymail.com/
+  language: en
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: dead
+  checked: 2026-10-01
+  notes: Host does not resolve in DNS (www and apex); robots.txt fetch failed.
+- id: throwinbox.com
+  name: Throw Inbox
+  url: https://throwinbox.com/en
+  language: en
+  read: manual
+  robots: allowed
+  terms: https://throwinbox.com/en/terms-of-service
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: 'Page shows "Current domain: zunexor.com". Terms ban overloading the service with bots only.'
+- id: tijdelijke-email.nl
+  name: tijdelijke-email.nl
+  url: https://tijdelijke-email.nl/
+  language: nl
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: script
+  checked: 2026-10-01
+  notes: Address shown only on /inbox/, which creates a mailbox; not fetched. Mails kept 1 day. Linked to temp.cool and temporary-email.com.
+- id: tinyhost.shop
+  name: Tinyhost
+  url: https://tinyhost.shop/
+  read: api
+  endpoint: https://tinyhost.shop/api/random-domains/?limit=50
+  json: domains[*]
+  robots: none
+  terms: null
+  automated: unknown
+  status: active
+  checked: 2026-10-01
+  notes: Documented public endpoint returns a random sample (max 50 per page); the full list (/api/all-domains/) needs a private token. Third-party data says about 41,600 domains, mostly user-added via MX. robots.txt is the HTML app shell. No terms page.
+- id: tmailor.com
+  name: Tmailor
+  url: https://tmailor.com/
+  language: en
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: blocked
+  checked: 2026-10-01
+  notes: Main page returned a Cloudflare challenge (403). Stopped there. Cloudflare challenge (403) on the main page; stopped. Says it runs 500+ rotating domains on Google MX.
+- id: tmpmail.pl
+  name: TmpMail.pl
+  url: https://tmpmail.pl/
+  language: pl
+  read: manual
+  robots: allowed
+  terms: https://tmpmail.pl/regulamin
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: availableDomains in the Livewire state. Random addresses use the short .pl domains; tmpmail.pl itself is shown as the domain for reserved addresses that need a login and have no time limit. Addresses live 24 hours after last activity.
+- id: trash-mail.com
+  name: TRASH-MAIL.com
+  url: https://www.trash-mail.com/
+  language: de
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: active
+  checked: 2026-10-01
+  notes: Public inbox site; table lists 3 open domains and 3 password-protected domains. No terms page linked.
+- id: trashmail.de
+  name: TrashMail.de
+  url: https://www.trashmail.de/
+  language: de
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: blocked
+  checked: 2026-10-01
+  notes: Cloudflare 'Just a moment' challenge on robots.txt and home page; stopped.
+- id: txen.de
+  name: txen.de
+  url: https://txen.de/
+  language: de
+  read: page
+  endpoint: https://txen.de/
+  within: "&quot;domains&quot;:\\[(.*?)\\]"
+  pattern: "&quot;([^&]+)&quot;"
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: active
+  checked: 2026-10-01
+  notes: Domain picker in the page markup. Addresses persist; mails deleted after 3 days. No terms page (Impressum, Datenschutz, FAQ only).
+- id: vanishinbox.com
+  name: VanishInbox
+  url: https://vanishinbox.com/
+  language: en
+  read: manual
+  robots: allowed
+  terms: https://vanishinbox.com/terms
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: FAQ names six domains; the picker adds three .edu.pl domains.
+- id: vip.215.im
+  name: YYDS Mail
+  url: https://vip.215.im/
+  language: zh
+  read: manual
+  robots: allowed
+  terms: https://vip.215.im/terms
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: yyds.dev appears only in the sample API response on the home page (an address at yyds.dev); treat as likely, not confirmed. Operator contact is a gmail.com address, which is not a handed-out domain.
+- id: vmail.dev
+  name: vmail.dev
+  url: https://vmail.dev/
+  read: manual
+  robots: none
+  terms: null
+  automated: unknown
+  status: script
+  checked: 2026-10-01
+  notes: Public instance of open-source oiov/vmail; app shell only.
+- id: wabblywabble.com
+  name: WabblyWabble
+  url: https://wabblywabble.com/
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: dead
+  checked: 2026-10-01
+  notes: DNS lookup failed (curl exit 6).
+- id: wegwerfmail.de
+  name: wegwerfmail.de
+  url: https://www.wegwerfmail.de/
+  language: de
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: dead
+  checked: 2026-10-01
+  notes: Serves only the placeholder 'aionda_weblayer'; Aionda runs TrashMail.com (see forwarders).
+- id: with.lt
+  name: LT Email Workshop (with.lt)
+  url: https://with.lt/
+  language: ko
+  read: manual
+  robots: allowed
+  terms: https://with.lt/page/%EC%9D%B4%EC%9A%A9%EC%95%BD%EA%B4%80
+  automated: forbidden
+  status: active
+  checked: 2026-10-01
+  notes: Free-domain group of the domain select. Two premium domains are masked in the HTML (l***.net, t*****o.cn) and left out. Terms ban access by automated scripts and bots.
+- id: xeramail.com
+  name: Xeramail
+  url: https://xeramail.com/
+  language: en
+  read: manual
+  robots: allowed
+  terms: https://xeramail.com/terms
+  automated: forbidden
+  status: active
+  checked: 2026-10-01
+  notes: FAQ example address is @xeramail.com. gmail.com on the page is only the owner contact address. /domains is a custom-domain manager, not a list. Terms ban bots creating large numbers of addresses only. phuturemail.com is the selected domain in the domain menu; xeramail.com is given as a custom-address example in the FAQ. /domains is a custom-domain page with no list. Terms forbid scripts or bots that create many addresses.
+- id: xn----7sbbfpa2cjamke9aze5f.com
+  name: Временная-почта.com
+  url: https://xn----7sbbfpa2cjamke9aze5f.com/
+  language: ru
+  read: manual
+  robots: unreachable
+  terms: null
+  automated: unknown
+  status: blocked
+  checked: 2026-10-01
+  notes: Bot check ('Checking your browser before accessing', hcdn) on robots.txt; stopped.
+- id: xn--ecktc2ee4ct2a0f.xn--vcki1fxh883oon2c.com
+  name: Sougou Service Onetime Mail
+  url: https://xn--ecktc2ee4ct2a0f.xn--vcki1fxh883oon2c.com/
+  language: ja
+  read: manual
+  robots: allowed
+  terms: https://xn--kcr066fqmf7pn.xn--vcki1fxh883oon2c.com/
+  automated: not mentioned
+  status: script
+  checked: 2026-10-01
+  notes: ワンタイムメール.総合サービス.com. Addresses (15 minutes to 1 week) are issued by a button; no domain in the HTML.
+- id: yopmail.com
+  name: YOPmail
+  url: https://yopmail.com/en/
+  language: fr
+  read: manual
+  robots: allowed
+  terms: https://yopmail.com/fr/conditions
+  automated: not mentioned
+  status: active
+  checked: 2026-10-01
+  notes: "Alternate domains page (raw/yopmail.com/domains.html) loads its list by script from a query URL that robots.txt disallows (Disallow: /*?), so only yopmail.com is recorded. No terms page linked. Alternate-domains page (/en/alternate-domains) fills its daily and other domain lists by script, so only yopmail.com is confirmed. Alternate domains forward into yopmail.com inboxes. No terms link found. Any name @yopmail.com, public inbox. The alternate-domains list loads in an iframe from domain?d=all, and robots.txt disallows every URL with a query string, so the alternate domains were not read (page saved as domains.html)."
+- id: youxiang.dev
+  name: YouXiang.dev
+  url: https://youxiang.dev/
+  language: zh
+  read: manual
+  robots: allowed
+  terms: null
+  automated: unknown
+  status: active
+  checked: 2026-10-01
+  notes: Redirects to /mailbox; domains in the embedded page data. Same operator as linshiyou.com.
+- id: zehnminutenmail.de
+  name: Zehnminutenmail
+  url: https://zehnminutenmail.de/
+  language: de
+  read: manual
+  robots: disallowed
+  terms: null
+  automated: unknown
+  status: blocked
+  checked: 2026-10-01
+  notes: robots.txt disallows everything for all agents; home page not fetched.

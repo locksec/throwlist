@@ -1,0 +1,29 @@
+name: A real email provider is on the list
+description: A domain on the list hosts real, lasting mailboxes or is a forwarding service
+labels: [false positive]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks. A confirmed report goes on the allowlist and the domain leaves the list in the next release.
+  - type: input
+    id: domain
+    attributes:
+      label: Domain
+      placeholder: provider.example
+    validations:
+      required: true
+  - type: input
+    id: provider
+    attributes:
+      label: Who runs it
+      description: The provider or relay service, with a link to its site.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it should not be listed
+      description: For example, a sign-up page for lasting mailboxes, or documentation saying it forwards to a real inbox.
+    validations:
+      required: true

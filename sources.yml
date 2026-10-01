@@ -1,0 +1,115 @@
+# The lists Throwlist merges, and Throwlist's own observations.
+#
+# trust         direct: a domain from this source is listed on its own.
+#               second: listed only when a source from another family agrees.
+# family        sources that copy from each other share a family, so a copy never
+#               counts as a second opinion. MailChecker, burner-email-providers and
+#               disposable-email-domain-list are one family: in October 2026, 56% of
+#               burner-email-providers was also in MailChecker, and about 90% of
+#               disposable-email-domain-list was in each of the other two.
+# observed      true when the source watches throwaway services, so its dates count
+#               as sightings (last_seen in domains.json)
+# keep_removed  true: keep a domain after this source drops it, since throwaway domains
+#               keep accepting mail after services stop showing them. false: follow the
+#               source, since a removal there is usually a correction.
+#
+# Every source here allows redistribution. Its notice is kept in NOTICE.
+
+- id: dea
+  name: disposable-email-domains
+  home: https://github.com/disposable-email-domains/disposable-email-domains
+  url: https://raw.githubusercontent.com/disposable-email-domains/disposable-email-domains/main/disposable_email_blocklist.conf
+  format: lines
+  license: CC0-1.0
+  trust: direct
+  family: dea
+  observed: false
+  keep_removed: false
+  notes: Reviewed by hand. Each addition needs a screenshot of a page handing out the domain.
+
+- id: fakefilter
+  name: FakeFilter
+  home: https://github.com/7c/fakefilter
+  url: https://raw.githubusercontent.com/7c/fakefilter/main/json/data.json
+  format: fakefilter
+  license: BSD-3-Clause
+  trust: direct
+  family: fakefilter
+  observed: true
+  keep_removed: true
+  notes: Watches throwaway services automatically and publishes daily, with first and last seen dates. Drops a domain after a year without a sighting.
+
+- id: disposable-crawls
+  name: disposable/disposable-email-domains, its own crawls
+  home: https://github.com/disposable/disposable-email-domains
+  url: https://raw.githubusercontent.com/disposable/disposable-email-domains/master/domains_source_map.txt
+  format: source-map
+  select: crawls
+  skip: [FGRibreau/mailchecker, wesbos/burner-email-providers, 7c/fakefilter, martenson/disposable-email-domains, disposable-email-domains/disposable-email-domains, unkn0w/disposable-email-domain-list]
+  license: MIT
+  trust: direct
+  family: disposable
+  observed: true
+  keep_removed: true
+  notes: Domains the aggregator's crawlers read from throwaway services (generator.email, emailfake.com, YOPmail's domain list, tempr.email and others), taken from its per-domain source map.
+
+- id: disposable-lists
+  name: disposable/disposable-email-domains, other lists it compiles
+  home: https://github.com/disposable/disposable-email-domains
+  url: https://raw.githubusercontent.com/disposable/disposable-email-domains/master/domains_source_map.txt
+  format: source-map
+  select: lists
+  skip: [FGRibreau/mailchecker, wesbos/burner-email-providers, 7c/fakefilter, martenson/disposable-email-domains, disposable-email-domains/disposable-email-domains, unkn0w/disposable-email-domain-list]
+  license: MIT
+  trust: second
+  family: disposable
+  observed: false
+  keep_removed: false
+  notes: Lists the aggregator compiles that Throwlist does not read directly (throwaway.cloud, its static lists and several smaller ones). Lists Throwlist reads directly are skipped, so a copy never counts twice.
+
+- id: mailchecker
+  name: MailChecker
+  home: https://github.com/FGRibreau/mailchecker
+  url: https://raw.githubusercontent.com/FGRibreau/mailchecker/master/list.txt
+  format: lines
+  license: MIT
+  trust: second
+  family: community
+  observed: false
+  keep_removed: false
+  notes: Large community list. Includes relay services, which Throwlist moves to relays.txt.
+
+- id: wesbos
+  name: burner-email-providers
+  home: https://github.com/wesbos/burner-email-providers
+  url: https://raw.githubusercontent.com/wesbos/burner-email-providers/master/emails.txt
+  format: lines
+  license: MIT
+  trust: second
+  family: community
+  observed: false
+  keep_removed: false
+  notes: Community list built from pull requests.
+
+- id: unkn0w
+  name: disposable-email-domain-list
+  home: https://github.com/unkn0w/disposable-email-domain-list
+  url: https://raw.githubusercontent.com/unkn0w/disposable-email-domain-list/main/domains.txt
+  format: lines
+  license: MIT
+  trust: second
+  family: community
+  observed: false
+  keep_removed: false
+  notes: Smaller list, strong on Polish services.
+
+- id: throwlist
+  name: Throwlist's own observations
+  home: https://github.com/locksec/throwlist
+  format: observations
+  license: CC0-1.0
+  trust: direct
+  family: throwlist
+  observed: true
+  keep_removed: false
+  notes: Domains seen on the services in services.yml, recorded in observations.tsv with the page as evidence. Rows are never deleted by the readers, so removing one is a correction.

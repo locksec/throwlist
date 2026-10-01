@@ -1,0 +1,27 @@
+name: Report a throwaway domain
+description: A temporary email domain that is not on the list yet
+labels: [add]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please send the domain only. Never paste an email address or anything from an inbox.
+  - type: input
+    id: domain
+    attributes:
+      label: Domain
+      placeholder: throwaway.example
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Page that hands out addresses on this domain
+      placeholder: https://temp-mail-site.example/
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
+      description: For example, how often your site sees it, or other domains the same service uses.

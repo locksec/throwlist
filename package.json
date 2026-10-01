@@ -1,0 +1,33 @@
+{
+  "name": "throwlist",
+  "version": "0.1.0",
+  "private": true,
+  "description": "An open list of temporary email domains, with evidence for every entry",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/locksec/throwlist.git"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "fetch": "node scripts/fetch.js",
+    "collect": "node scripts/collect.js",
+    "build": "node scripts/build.js",
+    "refresh": "npm run fetch && npm run collect && npm run build",
+    "mx": "node scripts/mx.js",
+    "observe": "node scripts/observe.js",
+    "check": "node scripts/check.js",
+    "test": "node --test",
+    "typecheck": "tsc -p jsconfig.json"
+  },
+  "dependencies": {
+    "yaml": "^2.9.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^7.0.2"
+  }
+}

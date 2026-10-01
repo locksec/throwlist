@@ -1,0 +1,2530 @@
+# Real mail providers that are never listed, whatever any source says. A domain here
+# also covers its subdomains. Each entry names who runs it and why it is here.
+
+- provider: Gmail
+  reason: Google's mail service
+  source: https://support.google.com/mail/answer/10313?hl=en
+  domains:
+    - gmail.com
+    - googlemail.com
+  notes: Google help says mail to @gmail.com and @googlemail.com reaches the same inbox.
+- provider: Outlook.com
+  reason: Microsoft's consumer mail service (formerly Hotmail)
+  source: https://signup.live.com/signup?lic=1&mkt=en-US
+  domains:
+    - outlook.com
+    - hotmail.com
+  notes: Domains offered on Microsoft account sign-up.
+- provider: Outlook.com (country and legacy domains)
+  reason: Microsoft's consumer mail service (formerly Hotmail)
+  source: https://github.com/thunderbird/autoconfig/blob/master/ispdb/hotmail.com.xml
+  domains:
+    - live.com
+    - msn.com
+    - windowslive.com
+    - outlook.at
+    - outlook.be
+    - outlook.cl
+    - outlook.cz
+    - outlook.de
+    - outlook.dk
+    - outlook.es
+    - outlook.fr
+    - outlook.hu
+    - outlook.ie
+    - outlook.in
+    - outlook.it
+    - outlook.jp
+    - outlook.kr
+    - outlook.lv
+    - outlook.my
+    - outlook.ph
+    - outlook.pt
+    - outlook.sa
+    - outlook.sg
+    - outlook.sk
+    - outlook.co.id
+    - outlook.co.il
+    - outlook.co.th
+    - outlook.com.ar
+    - outlook.com.au
+    - outlook.com.br
+    - outlook.com.gr
+    - outlook.com.tr
+    - outlook.com.vn
+    - hotmail.be
+    - hotmail.ca
+    - hotmail.cl
+    - hotmail.cz
+    - hotmail.de
+    - hotmail.dk
+    - hotmail.es
+    - hotmail.fi
+    - hotmail.fr
+    - hotmail.gr
+    - hotmail.hu
+    - hotmail.it
+    - hotmail.lt
+    - hotmail.lv
+    - hotmail.my
+    - hotmail.nl
+    - hotmail.no
+    - hotmail.ph
+    - hotmail.rs
+    - hotmail.se
+    - hotmail.sg
+    - hotmail.sk
+    - hotmail.co.id
+    - hotmail.co.il
+    - hotmail.co.in
+    - hotmail.co.jp
+    - hotmail.co.kr
+    - hotmail.co.th
+    - hotmail.co.uk
+    - hotmail.co.za
+    - hotmail.com.ar
+    - hotmail.com.au
+    - hotmail.com.br
+    - hotmail.com.hk
+    - hotmail.com.tr
+    - hotmail.com.tw
+    - hotmail.com.vn
+    - live.at
+    - live.be
+    - live.ca
+    - live.cl
+    - live.cn
+    - live.de
+    - live.dk
+    - live.fi
+    - live.fr
+    - live.hk
+    - live.ie
+    - live.in
+    - live.it
+    - live.jp
+    - live.nl
+    - live.no
+    - live.ru
+    - live.se
+    - live.co.kr
+    - live.co.uk
+    - live.co.za
+    - live.com.ar
+    - live.com.au
+    - live.com.mx
+    - live.com.my
+    - live.com.ph
+    - live.com.pt
+    - live.com.sg
+    - livemail.tw
+  notes: Thunderbird's provider database. Microsoft's sign-up page offers the matching outlook.* country domain per market (signup.live.com/signup?mkt=de-DE and so on); live.*, msn.com, windowslive.com and hotmail.* country domains are closed to new sign-ups but existing mailboxes remain.
+- provider: Outlook.com (New Zealand)
+  reason: Microsoft's consumer mail service (formerly Hotmail)
+  source: https://signup.live.com/signup?lic=1&mkt=en-NZ
+  domains:
+    - outlook.co.nz
+  notes: Offered on Microsoft account sign-up for the New Zealand market; missing from Thunderbird's list.
+- provider: Outlook.com (passport.com)
+  reason: Microsoft's consumer mail service (formerly Hotmail)
+  source: https://en.wikipedia.org/wiki/Outlook.com
+  domains:
+    - passport.com
+  notes: Wikipedia fallback; no longer offered but existing addresses are maintained; MX points to Outlook.com.
+- provider: Yahoo
+  reason: Yahoo Mail
+  source: https://help.yahoo.com/kb/SLN2153.html
+  domains:
+    - yahoo.com
+    - myyahoo.com
+    - yahoo.co.uk
+    - yahoo.fr
+  notes: "Yahoo help: new accounts get @yahoo.com or @myyahoo.com; older accounts keep country domains such as @yahoo.co.uk and @yahoo.fr."
+- provider: Yahoo (legacy and country domains)
+  reason: Yahoo Mail
+  source: https://github.com/thunderbird/autoconfig/blob/master/ispdb/yahoo.com.xml
+  domains:
+    - yahoo.ca
+    - yahoo.de
+    - yahoo.it
+    - yahoo.es
+    - yahoo.se
+    - yahoo.co.in
+    - yahoo.co.nz
+    - yahoo.com.au
+    - yahoo.com.ar
+    - yahoo.com.br
+    - yahoo.com.mx
+    - ymail.com
+    - rocketmail.com
+  notes: Thunderbird's provider database; closed to new sign-ups, existing mailboxes remain. The same file lists cox.net, which Yahoo hosts for Cox (left to the US ISP list).
+- provider: AOL
+  reason: AOL Mail (owned by Yahoo)
+  source: https://help.aol.com/articles/how-do-i-use-other-email-applications-to-send-and-receive-my-aol-mail
+  domains:
+    - aol.com
+- provider: AOL (Japan)
+  reason: AOL Mail (owned by Yahoo)
+  source: https://help.aol.com/articles/faq-aol-jp
+  domains:
+    - aol.jp
+  notes: AOL help (Japanese) says @aol.jp and @aol.com mail continue after AOL Japan content closed in 2022.
+- provider: AOL (Netscape ISP)
+  reason: Netscape ISP mail, run by AOL
+  source: https://help.aol.com/articles/configure-third-party-email-applications-to-send-and-receive-your-netscape-mail
+  domains:
+    - netscape.com
+- provider: AOL (legacy and country domains)
+  reason: AOL Mail (owned by Yahoo)
+  source: https://github.com/thunderbird/autoconfig/blob/master/ispdb/aol.com.xml
+  domains:
+    - aim.com
+    - netscape.net
+    - compuserve.com
+    - cs.com
+    - wmconnect.com
+    - aol.de
+    - aol.it
+    - aol.fr
+    - aol.es
+    - aol.se
+    - aol.co.uk
+    - aol.co.nz
+    - aol.com.au
+    - aol.com.ar
+    - aol.com.br
+    - aol.com.mx
+  notes: Thunderbird's provider database; all still have AOL MX records.
+- provider: AOL (vanity domains)
+  reason: AOL Mail (owned by Yahoo)
+  source: https://en.wikipedia.org/wiki/AOL_Mail
+  domains:
+    - ygm.com
+    - wow.com
+  notes: Wikipedia fallback; former vanity domains, MX still points to AOL. love.com and games.com from the same sentence no longer route to AOL.
+- provider: iCloud Mail
+  reason: Apple's mail service
+  source: https://support.apple.com/en-us/118230
+  domains:
+    - icloud.com
+    - me.com
+    - mac.com
+  notes: me.com and mac.com are legacy domains kept by older accounts.
+- provider: GMX
+  reason: GMX FreeMail (1&1 Mail & Media)
+  source: https://www.gmx.net/mail/e-mail-adressen/
+  domains:
+    - gmx.de
+    - gmx.net
+    - mein.gmx
+- provider: GMX (international)
+  reason: GMX FreeMail (1&1 Mail & Media)
+  source: https://www.gmx.com/mail/alias-addresses/
+  domains:
+    - gmx.com
+    - gmx.us
+    - gmx.co.uk
+    - gmx.ca
+- provider: GMX (France)
+  reason: GMX FreeMail (1&1 Mail & Media)
+  source: https://www.gmx.fr/
+  domains:
+    - gmx.fr
+- provider: GMX (Spain)
+  reason: GMX FreeMail (1&1 Mail & Media)
+  source: https://www.gmx.es/
+  domains:
+    - gmx.es
+- provider: GMX (premium endings)
+  reason: GMX ProMail and TopMail addresses (1&1 Mail & Media)
+  source: https://www.gmx.net/produkte/premium/email-adress-endungen/
+  domains:
+    - gmx.eu
+    - gmx.org
+    - gmx.info
+    - gmx.biz
+    - gmx.tm
+    - mail.gmx
+    - email.gmx
+    - bach.gmx
+    - bauer.gmx
+    - baumann.gmx
+    - beck.gmx
+    - becker.gmx
+    - bender.gmx
+    - berg.gmx
+    - berger.gmx
+    - bergmann.gmx
+    - beyer.gmx
+    - bock.gmx
+    - boehm.gmx
+    - boehme.gmx
+    - brand.gmx
+    - brandt.gmx
+    - braun.gmx
+    - busch.gmx
+    - engel.gmx
+    - fischer.gmx
+    - franke.gmx
+    - frey.gmx
+    - fuchs.gmx
+    - geiger.gmx
+    - graf.gmx
+    - haas.gmx
+    - hahn.gmx
+    - hansen.gmx
+    - hartmann.gmx
+    - hauser.gmx
+    - hess.gmx
+    - hesse.gmx
+    - hoffmann.gmx
+    - hofmann.gmx
+    - horn.gmx
+    - huber.gmx
+    - jansen.gmx
+    - janssen.gmx
+    - jung.gmx
+    - kaiser.gmx
+    - kaufmann.gmx
+    - keller.gmx
+    - klein.gmx
+    - koch.gmx
+    - koehler.gmx
+    - koenig.gmx
+    - krause.gmx
+    - krueger.gmx
+    - kuehn.gmx
+    - kuhn.gmx
+    - kunz.gmx
+    - lang.gmx
+    - lange.gmx
+    - lehmann.gmx
+    - maier.gmx
+    - marx.gmx
+    - maurer.gmx
+    - mayer.gmx
+    - meier.gmx
+    - meyer.gmx
+    - miller.gmx
+    - moeller.gmx
+    - moser.gmx
+    - mueller.gmx
+    - nagel.gmx
+    - neumann.gmx
+    - peters.gmx
+    - petersen.gmx
+    - pfeiffer.gmx
+    - pohl.gmx
+    - reuter.gmx
+    - richter.gmx
+    - ritter.gmx
+    - roth.gmx
+    - sauer.gmx
+    - schaefer.gmx
+    - scherer.gmx
+    - schmid.gmx
+    - schmidt.gmx
+    - schmitt.gmx
+    - schmitz.gmx
+    - schneider.gmx
+    - scholz.gmx
+    - schreiber.gmx
+    - schroeder.gmx
+    - schubert.gmx
+    - schulte.gmx
+    - schulz.gmx
+    - schulze.gmx
+    - schuster.gmx
+    - schwab.gmx
+    - schwarz.gmx
+    - seidel.gmx
+    - sommer.gmx
+    - stein.gmx
+    - steiner.gmx
+    - vogel.gmx
+    - vogt.gmx
+    - voigt.gmx
+    - voss.gmx
+    - wagner.gmx
+    - weber.gmx
+    - weiss.gmx
+    - winkler.gmx
+    - winter.gmx
+    - ziegler.gmx
+    - zimmer.gmx
+    - zimmermann.gmx
+    - andrea.gmx
+    - angelika.gmx
+    - anja.gmx
+    - anna.gmx
+    - barbara.gmx
+    - birgit.gmx
+    - brigitte.gmx
+    - claudia.gmx
+    - daniela.gmx
+    - elke.gmx
+    - gabriele.gmx
+    - heike.gmx
+    - julia.gmx
+    - karin.gmx
+    - katharina.gmx
+    - katja.gmx
+    - katrin.gmx
+    - kerstin.gmx
+    - manuela.gmx
+    - maria.gmx
+    - marion.gmx
+    - martina.gmx
+    - melanie.gmx
+    - monika.gmx
+    - nadine.gmx
+    - nicole.gmx
+    - petra.gmx
+    - renate.gmx
+    - sabine.gmx
+    - susanne.gmx
+    - tanja.gmx
+    - adam.gmx
+    - albrecht.gmx
+    - alexander.gmx
+    - andreas.gmx
+    - arnold.gmx
+    - christian.gmx
+    - daniel.gmx
+    - dietrich.gmx
+    - ernst.gmx
+    - florian.gmx
+    - frank.gmx
+    - franz.gmx
+    - friedrich.gmx
+    - fritz.gmx
+    - guenther.gmx
+    - heinrich.gmx
+    - heinz.gmx
+    - hermann.gmx
+    - herrmann.gmx
+    - jakob.gmx
+    - jan.gmx
+    - johann.gmx
+    - juergen.gmx
+    - klaus.gmx
+    - lorenz.gmx
+    - ludwig.gmx
+    - lutz.gmx
+    - markus.gmx
+    - martin.gmx
+    - matthias.gmx
+    - michael.gmx
+    - michel.gmx
+    - otto.gmx
+    - paul.gmx
+    - peter.gmx
+    - reinhardt.gmx
+    - rudolph.gmx
+    - sebastian.gmx
+    - simon.gmx
+    - stefan.gmx
+    - stephan.gmx
+    - thomas.gmx
+    - tobias.gmx
+    - ulrich.gmx
+    - walter.gmx
+    - walther.gmx
+    - werner.gmx
+    - wilhelm.gmx
+    - wolf.gmx
+    - wolff.gmx
+    - wolfgang.gmx
+  notes: Paid tiers; includes 189 first-name and surname endings under the .gmx brand TLD.
+- provider: GMX (Austria and Switzerland)
+  reason: GMX FreeMail (1&1 Mail & Media)
+  source: https://github.com/thunderbird/autoconfig/blob/master/ispdb/gmx.net.xml
+  domains:
+    - gmx.at
+    - gmx.ch
+  notes: Thunderbird's provider database; MX points to GMX.
+- provider: GMX (other country domains)
+  reason: GMX FreeMail (1&1 Mail & Media)
+  source: https://github.com/thunderbird/autoconfig/blob/master/ispdb/gmx.com.xml
+  domains:
+    - gmx.cn
+    - gmx.co.in
+    - gmx.com.br
+    - gmx.com.my
+    - gmx.hk
+    - gmx.ie
+    - gmx.ph
+    - gmx.pt
+    - gmx.ru
+    - gmx.se
+    - gmx.sg
+    - gmx.tw
+    - gmx.com.tr
+    - gmx.it
+    - gmx.li
+  notes: Thunderbird's provider database; MX points to GMX.
+- provider: GMX (fun and alias domains)
+  reason: Extra addresses on a GMX mailbox (1&1 Mail & Media)
+  source: https://www.gmx.net/produkte/premium/fun-alias-wegwerf-emailadressen/
+  domains:
+    - abwesend.de
+    - buerotiger.de
+    - fantasymail.de
+    - ist-einmalig.de
+    - kaffeeschluerfer.com
+    - neue-dateien.de
+    - nurfuerspam.de
+    - partybombe.de
+    - quantentunnel.de
+    - shared-files.de
+    - sonnenkinder.org
+    - turboprinz.de
+    - turboprinzessin.de
+    - unterderbruecke.de
+    - vollbio.de
+    - volloeko.de
+    - vorsicht-bissig.de
+    - will-hier-weg.de
+    - wolke7.net
+  notes: Aliases that deliver to a lasting GMX inbox; GMX markets them as throwaway addresses for shopping. The page names 20 of about 95; the rest are in unconfirmed.txt.
+- provider: mail.com
+  reason: mail.com free webmail (1&1 Mail & Media)
+  source: https://www.mail.com/mail/domains/
+  domains:
+    - 2trom.com
+    - accountant.com
+    - acdcfan.com
+    - activist.com
+    - adexec.com
+    - africamail.com
+    - alumni.com
+    - angelic.com
+    - archaeologist.com
+    - arcticmail.com
+    - artlover.com
+    - asia.com
+    - atheist.com
+    - australiamail.com
+    - bartender.net
+    - berlin.com
+    - bikerider.com
+    - birdlover.com
+    - boardermail.com
+    - brazilmail.com
+    - brew-master.com
+    - bsdmail.com
+    - californiamail.com
+    - catlover.com
+    - cheerful.com
+    - chef.net
+    - chemist.com
+    - chinamail.com
+    - clubmember.org
+    - collector.org
+    - columnist.com
+    - comic.com
+    - consultant.com
+    - contractor.net
+    - counsellor.com
+    - cutey.com
+    - cyber-wizard.com
+    - cyberdude.com
+    - cybergal.com
+    - cyberservices.com
+    - dallasmail.com
+    - dbzmail.com
+    - diplomats.com
+    - disciples.com
+    - discofan.com
+    - doglover.com
+    - doramail.com
+    - dr.com
+    - dublin.com
+    - dutchmail.com
+    - elvisfan.com
+    - email.com
+    - engineer.com
+    - englandmail.com
+    - europe.com
+    - europemail.com
+    - execs.com
+    - financier.com
+    - fireman.net
+    - galaxyhit.com
+    - gardener.com
+    - geologist.com
+    - germanymail.com
+    - graduate.org
+    - graphic-designer.com
+    - greenmail.net
+    - hackermail.com
+    - hairdresser.net
+    - hilarious.com
+    - hiphopfan.com
+    - iname.com
+    - innocent.com
+    - irelandmail.com
+    - israelmail.com
+    - italymail.com
+    - keromail.com
+    - kissfans.com
+    - kittymail.com
+    - koreamail.com
+    - legislator.com
+    - linuxmail.org
+    - lobbyist.com
+    - lovecat.com
+    - madonnafan.com
+    - mail.com
+    - marchmail.com
+    - metalfan.com
+    - mexicomail.com
+    - minister.com
+    - moscowmail.com
+    - munich.com
+    - musician.org
+    - muslim.com
+    - myself.com
+    - ninfan.com
+    - nonpartisan.com
+    - null.net
+    - nycmail.com
+    - optician.com
+    - orthodontist.net
+    - pediatrician.com
+    - petlover.com
+    - photographer.net
+    - physicist.net
+    - polandmail.com
+    - politician.com
+    - post.com
+    - priest.com
+    - programmer.net
+    - protestant.com
+    - publicist.com
+    - ravemail.com
+    - realtyagent.com
+    - reborn.com
+    - reggaefan.com
+    - registerednurses.com
+    - reincarnate.com
+    - religious.com
+    - repairman.com
+    - safrica.com
+    - saintly.com
+    - sanfranmail.com
+    - scotlandmail.com
+    - secretary.net
+    - socialworker.net
+    - sociologist.com
+    - songwriter.net
+    - spainmail.com
+    - swedenmail.com
+    - swissmail.com
+    - teachers.org
+    - techie.com
+    - technologist.com
+    - theplate.com
+    - therapist.net
+    - toke.com
+    - toothfairy.com
+    - torontomail.com
+    - tvstar.com
+    - usa.com
+    - uymail.com
+    - webname.com
+  notes: Official domain list on mail.com.
+- provider: mail.com (legacy domains)
+  reason: mail.com free webmail (1&1 Mail & Media)
+  source: https://github.com/thunderbird/autoconfig/blob/master/ispdb/mail.com.xml
+  domains:
+    - 2die4.com
+    - aircraftmail.com
+    - alabama.usa.com
+    - alaska.usa.com
+    - allergist.com
+    - alumnidirector.com
+    - americamail.com
+    - amorous.com
+    - arizona.usa.com
+    - asia-mail.com
+    - bigger.com
+    - blader.com
+    - california.usa.com
+    - caress.com
+    - cliffhanger.com
+    - computer4u.com
+    - coolsite.net
+    - count.com
+    - deliveryman.com
+    - doctor.com
+    - earthling.net
+    - feelings.com
+    - florida.usa.com
+    - footballer.com
+    - hockeymail.com
+    - homemail.com
+    - hot-shot.com
+    - hour.com
+    - humanoid.net
+    - illinois.usa.com
+    - inorbit.com
+    - instructor.net
+    - insurer.com
+    - journalist.com
+    - lawyer.com
+    - loveable.com
+    - mail.org
+    - mindless.com
+    - mobsters.com
+    - monarchy.com
+    - newyork.usa.com
+    - pacificwest.com
+    - playful.com
+    - popstar.com
+    - presidency.com
+    - representative.com
+    - rescueteam.com
+    - rocketship.com
+    - rockfan.com
+    - royal.net
+    - salesperson.net
+    - seductive.com
+    - snakebite.com
+    - texas.usa.com
+    - thegame.com
+    - umpire.com
+    - weirdness.com
+    - who.net
+    - whoever.com
+    - winning.com
+    - witty.com
+    - worker.com
+    - workmail.com
+    - writeme.com
+    - yours.com
+  notes: Thunderbird's provider database; kept only those whose MX still points to mail.com.
+- provider: WEB.DE
+  reason: WEB.DE FreeMail (1&1 Mail & Media)
+  source: https://web.de/email/neue-email-adresse/
+  domains:
+    - web.de
+- provider: WEB.DE (premium)
+  reason: WEB.DE paid mail (1&1 Mail & Media)
+  source: https://web.de/email/tarifvergleich/
+  domains:
+    - email.de
+- provider: Yandex Mail
+  reason: Yandex's mail service
+  source: https://yandex.ru/support/yandex-360/customers/mail/ru/web/preferences/about-sender/additional-addresses
+  domains:
+    - yandex.ru
+    - yandex.com
+    - yandex.by
+    - yandex.kz
+    - ya.ru
+  notes: Every mailbox gets aliases in the by and kz national domains, com and ya.ru.
+- provider: Yandex Mail (legacy)
+  reason: Yandex's mail service
+  source: https://github.com/thunderbird/autoconfig/blob/master/ispdb/yandex.ru.xml
+  domains:
+    - narod.ru
+  notes: Thunderbird's provider database; MX points to Yandex.
+- provider: Mail.ru
+  reason: Mail (Mail.ru / VK)
+  source: https://account.mail.ru/signup
+  domains:
+    - mail.ru
+    - internet.ru
+    - bk.ru
+    - inbox.ru
+    - list.ru
+  notes: Domain list from the sign-up page config.
+- provider: Mail.ru (VK Mail)
+  reason: Mail (Mail.ru / VK)
+  source: https://help.mail.ru/mail/account/signup/
+  domains:
+    - vk.com
+  notes: Mail's sign-up help uses a vk.com address as a mailbox example; vk.com MX points to Mail.ru.
+- provider: Proton Mail
+  reason: Encrypted mail service from Proton AG (Switzerland)
+  source: https://proton.me/support/addresses-and-aliases
+  domains:
+    - proton.me
+    - protonmail.com
+    - protonmail.ch
+    - pm.me
+- provider: Tuta
+  reason: Encrypted mail service from Tutao GmbH (Germany), formerly Tutanota
+  source: https://tuta.com/blog/anonymous-email
+  domains:
+    - tuta.com
+    - tutanota.com
+    - tutanota.de
+    - tutamail.com
+    - tuta.io
+    - keemail.me
+  notes: keemail.me is on the FGRibreau/mailchecker throwaway list.
+- provider: Fastmail
+  reason: Paid mail service from Fastmail Pty Ltd (Australia), including Pobox
+  source: https://www.fastmail.help/hc/en-us/articles/6239365719055-What-domains-can-I-use-with-Fastmail
+  domains:
+    - 123mail.org
+    - 150mail.com
+    - 150ml.com
+    - 16mail.com
+    - 2-mail.com
+    - 4email.net
+    - 50mail.com
+    - airpost.net
+    - aliencamel.com
+    - allmail.net
+    - cluemail.com
+    - elitemail.org
+    - emailcorner.net
+    - emailengine.net
+    - emailengine.org
+    - emailgroups.net
+    - emailplus.org
+    - emailuser.net
+    - eml.cc
+    - f-m.fm
+    - fast-email.com
+    - fast-mail.org
+    - fastem.com
+    - fastemailer.com
+    - fastest.cc
+    - fastimap.com
+    - fastmail.ca
+    - fastmail.cn
+    - fastmail.com
+    - fastmail.com.au
+    - fastmail.fm
+    - fastmail.im
+    - fastmail.in
+    - fastmail.jp
+    - fastmail.mx
+    - fastmail.net
+    - fastmail.org
+    - fastmail.to
+    - fastmail.tw
+    - fastmailbox.net
+    - fastmessaging.com
+    - fea.st
+    - fmailbox.com
+    - fmgirl.com
+    - fmguy.com
+    - foobox.com
+    - foobox.net
+    - ftml.net
+    - hailmail.net
+    - imap-mail.com
+    - imap.cc
+    - imapmail.org
+    - immerbox.com
+    - immermail.com
+    - inoutbox.com
+    - internet-e-mail.com
+    - internet-mail.org
+    - internetemails.net
+    - internetmailing.net
+    - jetemail.net
+    - justemail.net
+    - letterboxes.org
+    - lifetimeaddress.com
+    - mail-central.com
+    - mail-page.com
+    - mailas.com
+    - mailbolt.com
+    - mailc.net
+    - mailcan.com
+    - mailforce.net
+    - mailhaven.com
+    - mailingaddress.org
+    - mailite.com
+    - mailmight.com
+    - mailnew.com
+    - mailsent.net
+    - mailservice.ms
+    - mailup.net
+    - mailworks.org
+    - mailzone.com
+    - ml1.net
+    - mm.st
+    - myfastmail.com
+    - mymacmail.com
+    - nospammail.net
+    - onepost.net
+    - ownmail.net
+    - penguinmail.com
+    - permanentmail.com
+    - petml.com
+    - pobox.com
+    - postinbox.com
+    - postpro.net
+    - proinbox.com
+    - promessage.com
+    - realemail.net
+    - reallyfast.biz
+    - reallyfast.info
+    - rushpost.com
+    - sent.as
+    - sent.at
+    - sent.com
+    - siemprebox.com
+    - siempremail.com
+    - speedpost.net
+    - speedymail.org
+    - ssl-mail.com
+    - swift-mail.com
+    - the-fastest.net
+    - the-quickest.com
+    - theinternetemail.com
+    - veribox.net
+    - veryfast.biz
+    - veryspeedy.net
+    - warpmail.net
+    - xsmail.com
+    - yepmail.net
+    - your-mail.com
+    - fastmail.co.uk
+    - fastmail.de
+    - fastmail.es
+    - fastmail.fr
+    - fastmail.nl
+    - fastmail.se
+    - fastmail.uk
+    - fmail.co.uk
+    - bestmail.us
+    - fastemail.us
+    - fastmail.us
+    - h-mail.us
+  notes: Official list of global, EU and US region domains; Fastmail masked email addresses also use Fastmail domains.
+- provider: Zoho Mail
+  reason: Free and paid mail service from Zoho Corporation
+  source: https://www.zoho.com/mail/how-to/create-an-email-account.html
+  domains:
+    - zohomail.com
+    - zohomail.in
+    - zohomail.com.au
+  notes: The same page names the EU domain with a typo (zohonmail.eu); zohomail.eu is sourced separately.
+- provider: Zoho Mail (EU and legacy domains)
+  reason: Zoho personal addresses in the EU data center and older zoho.com accounts
+  source: https://help.zoho.com/portal/en-gb/community/topic/zoho-com-email-account
+  domains:
+    - zohomail.eu
+    - zoho.com
+  notes: Thread on Zoho's official help forum from a user holding both addresses.
+- provider: HEY
+  reason: Paid mail service from 37signals
+  source: https://www.hey.com/faqs/
+  domains:
+    - hey.com
+- provider: mailbox.org
+  reason: Paid mail service from Heinlein Support GmbH (Germany)
+  source: https://mailbox.org/en/
+  domains:
+    - mailbox.org
+- provider: Posteo
+  reason: Paid mail service from Posteo e.K. (Germany)
+  source: https://posteo.de/en/help/which-domains-are-available-for-posteo-alias-addresses
+  domains:
+    - posteo.de
+    - posteo.com
+    - posteo.net
+    - posteo.us
+    - posteo.ca
+    - posteo.uk
+    - posteo.ie
+    - posteo.es
+    - posteo.at
+    - posteo.ch
+    - posteo.nl
+    - posteo.be
+    - posteo.lu
+    - posteo.au
+    - posteo.cl
+    - posteo.co
+    - posteo.co.uk
+    - posteo.com.br
+    - posteo.cr
+    - posteo.cz
+    - posteo.dk
+    - posteo.ee
+    - posteo.eu
+    - posteo.fi
+    - posteo.gl
+    - posteo.gr
+    - posteo.hn
+    - posteo.hr
+    - posteo.hu
+    - posteo.in
+    - posteo.is
+    - posteo.it
+    - posteo.jp
+    - posteo.la
+    - posteo.li
+    - posteo.lt
+    - posteo.me
+    - posteo.mx
+    - posteo.my
+    - posteo.no
+    - posteo.nz
+    - posteo.org
+    - posteo.pe
+    - posteo.pl
+    - posteo.pm
+    - posteo.pt
+    - posteo.ro
+    - posteo.se
+    - posteo.sg
+    - posteo.si
+    - posteo.tn
+  notes: Covers both the account domains and the alias-only domains.
+- provider: Runbox
+  reason: Paid mail service from Runbox Solutions AS (Norway)
+  source: https://runbox.com/blog/2025/04/choose-your-perfect-email-domain-name-with-runbox/
+  domains:
+    - runbox.com
+    - runbox.no
+    - runbox.at
+    - runbox.ch
+    - runbox.dk
+    - runbox.is
+    - runbox.uk
+    - runbox.nl
+    - runbox.pt
+    - runbox.it
+    - runbox.cz
+    - runbox.li
+    - runbox.co.in
+    - runbox.bz
+    - runbox.ky
+    - runbox.me
+    - rnbx.uk
+    - xobnur.uk
+    - runbox.eu
+    - runbox.us
+    - runbox.biz
+    - runbox.co
+    - runbox.email
+    - mailhouse.biz
+    - mailhost.work
+    - messagebox.email
+    - run.box
+    - rbx.run
+    - rbx.email
+    - rbx.life
+    - rbox.co
+    - rbox.me
+    - runbox.rocks
+    - offshore.rocks
+    - runbox7.com
+    - runbox.io
+    - runbox.la
+  notes: Most domains on this page are shown as images; every Runbox domain delivers to the same mailbox.
+- provider: Mailfence
+  reason: Encrypted mail service from ContactOffice Group (Belgium)
+  source: https://mailfence.com/en/faq.jsp
+  domains:
+    - mailfence.com
+- provider: StartMail
+  reason: Paid mail service from StartMail B.V. (Netherlands)
+  source: https://www.startmail.com/aliases
+  domains:
+    - startmail.com
+  notes: StartMail aliases on use.startmail.com are in relays.yml.
+- provider: Hushmail
+  reason: Encrypted mail service from Hush Communications (Canada)
+  source: https://secure.hushmail.com/public/downloads/Hushmail-Authentication%20and%20Encryption.pdf
+  domains:
+    - hushmail.com
+    - hush.com
+    - hush.ai
+    - hushmail.me
+    - mac.hush.com
+  notes: hush.com, hush.ai and mac.hush.com are on the mailchecker list; hush.ai is also on wesbos/burner-email-providers.
+- provider: Hushmail (practice domains)
+  reason: Hushmail shared domains offered to healthcare and counseling practices
+  source: https://www.hushmail.com/faq
+  domains:
+    - therapyemail.com
+    - counselingmail.com
+    - therapysecure.com
+    - counselingsecure.com
+  notes: Practices may also use a subdomain of hush.com.
+- provider: Disroot
+  reason: Free mail from the Disroot.org volunteer collective (Netherlands)
+  source: https://disroot.org/en/services/email
+  domains:
+    - disroot.org
+- provider: Disroot (alias domain)
+  reason: Alias domain given to every Disroot user since 2019
+  source: https://disroot.org/blog/this_year_couldnt_become_any_crazier
+  domains:
+    - getgoogleoff.me
+- provider: Riseup
+  reason: Free mail from the Riseup activist collective (US)
+  source: https://riseup.net/en/email
+  domains:
+    - riseup.net
+- provider: CounterMail
+  reason: Encrypted paid mail service (Sweden)
+  source: https://countermail.com/?p=alias
+  domains:
+    - countermail.com
+    - cmail.nu
+- provider: Kolab Now
+  reason: Paid mail service from Apheleia IT AG (Switzerland)
+  source: https://kolabnow.com/api/auth/signup/domains
+  domains:
+    - swisscollab.ch
+    - pressmail.ch
+    - barmail.ch
+    - swissgroupware.ch
+    - mykolab.com
+    - myswissmail.ch
+    - kolabnow.ch
+    - journalistmail.ch
+    - diplomail.ch
+    - mailatlaw.ch
+    - legalprivilege.ch
+    - switzerlandmail.ch
+    - collaborative.li
+    - medmail.ch
+    - attorneymail.ch
+    - libertymail.net
+    - medicmail.ch
+    - trusted-legal-mail.ch
+    - opengroupware.ch
+    - mykolab.ch
+    - freedommail.ch
+    - libertymail.co
+    - groupoffice.ch
+    - kolabnow.com
+  notes: Domains returned by Kolab Now's own sign-up API.
+- provider: cock.li
+  reason: Free long-running mail host (since 2013, 1M+ users)
+  source: https://cock.li/register.php
+  domains:
+    - cock.li
+    - airmail.cc
+    - 420blaze.it
+    - aaathats3as.com
+    - cumallover.me
+    - horsefucker.org
+    - national.shitposting.agency
+    - nigge.rs
+    - cock.lu
+    - cock.email
+    - firemail.cc
+    - memeware.net
+    - cocaine.ninja
+    - waifu.club
+  notes: Some throwaway lists include these domains, but they are lasting mailboxes. Six of them (airmail.cc, 420blaze.it, cumallover.me, nigge.rs, firemail.cc, waifu.club) are on the mailchecker list; nigge.rs is also on wesbos.
+- provider: Lavabit
+  reason: Encrypted mail service (US)
+  source: https://lavabit.com/
+  domains:
+    - lavabit.com
+  notes: Not accepting new users; existing mailboxes remain online. lavabit.com is on the mailchecker list.
+- provider: Librem Mail
+  reason: Mail service in Librem One from Purism SPC
+  source: https://librem.one/faq/
+  domains:
+    - librem.one
+- provider: Infomaniak
+  reason: Free and paid mail service from Infomaniak (Switzerland)
+  source: https://news.infomaniak.com/en/create-free-email-address/
+  domains:
+    - ik.me
+    - ikmail.com
+    - etik.com
+  notes: ikmail.com is on the wesbos/burner-email-providers list.
+- provider: Purelymail
+  reason: Low-cost mail service with shared domains
+  source: https://purelymail.com/signup
+  domains:
+    - purelymail.com
+    - cheapermail.com
+    - placeq.com
+    - rethinkmail.com
+    - worldofmail.com
+- provider: Mailo
+  reason: Free and paid mail service from Mailo SAS (France), formerly Net-C
+  source: https://faq.mailo.com/compte/noms-de-domaine-disponibles-pour-les-adresses-mailo.htm
+  domains:
+    - mailo.com
+    - netcourrier.com
+    - netc.fr
+    - francemel.fr
+    - emailasso.net
+    - lavache.com
+    - monemail.com
+    - mailo.fr
+    - mailo.be
+    - mailo.lu
+    - mailo.es
+    - mailo.it
+    - mailo.uk
+    - mailo.pt
+    - mailo.eu
+    - mailo.ca
+    - mailo.bzh
+    - mailo.alsace
+    - mailo.corsica
+    - mailo.cat
+- provider: Mailo (legacy domains)
+  reason: Older Mailo and Net-C domains still hosting existing mailboxes
+  source: https://faq.mailo.com/compte/noms-de-domaine-disponibles-pour-les-adresses-mailo.htm
+  domains:
+    - net-c.com
+    - netc.eu
+    - net-c.nl
+    - net-c.be
+    - netc.lu
+    - netc.it
+    - net-c.es
+    - net-c.cat
+    - netc.pl
+    - net-c.ca
+    - netcmail.com
+    - europamel.net
+    - africamel.net
+    - brusseler.com
+    - inmano.com
+    - perso.be
+    - teaser.fr
+    - mailoo.org
+    - mongenie.com
+    - ntymail.com
+  notes: No longer offered for new addresses; existing users keep them.
+- provider: Systemli
+  reason: Free mail from the systemli.org tech collective (Germany)
+  source: https://www.systemli.org/en/service/mail/
+  domains:
+    - systemli.org
+- provider: dismail.de
+  reason: Free privacy-focused mail service (Germany)
+  source: https://dismail.de/
+  domains:
+    - dismail.de
+- provider: mail.de
+  reason: Free and paid mail service from mail.de GmbH (Germany)
+  source: https://mail.de/
+  domains:
+    - mail.de
+- provider: Inbox.lv
+  reason: Free and paid mail service from Inbox.lv (Latvia)
+  source: https://login.inbox.lv/signup
+  domains:
+    - inbox.lv
+    - mail.lv
+    - inbox.eu
+- provider: Neomailbox
+  reason: Paid secure mail service
+  source: https://www.neomailbox.com/services/secure-email
+  domains:
+    - neomailbox.ch
+    - neomailbox.net
+    - neo.email
+  notes: Addresses sit on a personal subdomain of these domains.
+- provider: Atomic Mail
+  reason: Free encrypted mail service
+  source: https://atomicmail.io/
+  domains:
+    - atomicmail.io
+  notes: The site showed an emergency maintenance banner on 2026-10-01.
+- provider: AT&T
+  reason: AT&T's consumer mail service, including legacy SBC, BellSouth and Pacific Bell domains
+  source: https://www.att.com/support/article/email-support/KM1010523/
+  domains:
+    - ameritech.net
+    - att.net
+    - bellsouth.net
+    - currently.com
+    - flash.net
+    - nvbell.net
+    - pacbell.net
+    - prodigy.net
+    - sbcglobal.net
+    - snet.net
+    - swbell.net
+    - wans.net
+- provider: Xfinity (Comcast)
+  reason: Comcast's consumer mail service
+  source: https://www.xfinity.com/support/articles/email-client-programs-with-xfinity-email
+  domains:
+    - comcast.net
+- provider: Verizon
+  reason: Verizon's consumer mail service
+  source: https://help.aol.com/articles/how-do-i-set-up-other-email-applications-to-send-and-receive-my-verizon-net-mail
+  domains:
+    - verizon.net
+  notes: Verizon.net mailboxes now run on AOL Mail.
+- provider: Cox
+  reason: Cox's consumer mail service
+  source: https://autoconfig.thunderbird.net/v1.1/cox.net
+  domains:
+    - cox.net
+  notes: Thunderbird ISPDB lists cox.net under Yahoo's servers; Cox mailboxes moved to Yahoo.
+- provider: Spectrum (Charter)
+  reason: Charter/Spectrum mail, including legacy Time Warner Cable, Road Runner, Bright House and Adelphia domains
+  source: https://www.spectrum.net/support/internet/mobile-email-setup
+  domains:
+    - adelphia.net
+    - bak.rr.com
+    - berkshire.rr.com
+    - bham.rr.com
+    - brighthouse.com
+    - cfl.rr.com
+    - charter.net
+    - emore.rr.com
+    - eufala.rr.com
+    - indy.rr.com
+    - mi.rr.com
+    - nycap.rr.com
+    - panhandle.rr.com
+    - roadrunner.com
+    - spectrum.net
+    - tampabay.rr.com
+    - twc.com
+    - twmi.rr.com
+  notes: Spectrum's page covers "any domain ending in .rr.com", so a suffix match on .rr.com is safe.
+- provider: Spectrum (Charter) (rr.com)
+  reason: Road Runner base domain, now Spectrum mail
+  source: https://autoconfig.thunderbird.net/v1.1/rr.com
+  domains:
+    - rr.com
+- provider: EarthLink
+  reason: EarthLink's consumer mail service
+  source: https://help.earthlink.net/portal/en/kb/articles/email-server-settings
+  domains:
+    - earthlink.net
+    - ix.netcom.com
+    - mindspring.com
+- provider: EarthLink (PeoplePC)
+  reason: PeoplePC mail, run by EarthLink
+  source: https://autoconfig.thunderbird.net/v1.1/peoplepc.com
+  domains:
+    - peoplepc.com
+- provider: Windstream (Kinetic)
+  reason: Windstream Kinetic mail, including legacy Alltel and other acquired domains
+  source: https://www.gokinetic.com/support/my-account/email-101/what-email-address-should-i-use-to-log-in-to-winds
+  domains:
+    - alltel.net
+    - ctc.net
+    - valornet.com
+    - windstream.net
+  notes: The page lists these legacy domains with "etc.", so more may exist.
+- provider: CenturyLink
+  reason: CenturyLink consumer mail
+  source: https://autoconfig.thunderbird.net/v1.1/centurylink.net
+  domains:
+    - centurylink.net
+    - embarqmail.com
+- provider: CenturyLink (CenturyTel legacy domains)
+  reason: CenturyTel and Madison River legacy mail, now CenturyLink
+  source: https://autoconfig.thunderbird.net/v1.1/centurytel.net
+  domains:
+    - centurytel.net
+    - clds.net
+    - coastalnow.net
+    - cochill.net
+    - cswnet.com
+    - emadisonriver.com
+    - emadisonriver.net
+    - gallatinriver.net
+    - grics.net
+    - gulftel.com
+    - madisonriver.biz
+    - mebtel.net
+- provider: CenturyLink (Qwest)
+  reason: Qwest legacy mail, now CenturyLink
+  source: https://autoconfig.thunderbird.net/v1.1/q.com
+  domains:
+    - q.com
+- provider: CenturyLink (El Paso)
+  reason: El Paso Telephone legacy mail on CenturyLink servers
+  source: https://autoconfig.thunderbird.net/v1.1/elpasotel.net
+  domains:
+    - elpasotel.net
+- provider: Astound Broadband
+  reason: Astound mail, including legacy RCN, Grande, Wave and Harris domains
+  source: https://www.astound.com/support/email/
+  domains:
+    - astound.net
+    - broadstripe.net
+    - cablespeed.com
+    - cedarcomm.com
+    - cni.net
+    - countrycablevision.net
+    - entouch.net
+    - harrisbb.com
+    - myastound.net
+    - mygrande.net
+    - rcn.com
+    - ssctv.net
+    - starstream.net
+    - starstreamcable.com
+    - wavecable.com
+    - wbcable.net
+- provider: TDS Telecom
+  reason: TDS subscriber mail, handed to Everymail for subscribers who kept their address
+  source: https://tdstelecom.com/tds-email-faq.html
+  domains:
+    - bajabb.com
+    - bendbroadband.com
+    - bendcable.com
+    - beyondbb.com
+    - chorus.com
+    - crestviewcable.com
+    - elknet.net
+    - mcttelecom.com
+    - merged.bendcable.com
+    - merr.com
+    - tds.net
+    - tdsmail.com
+    - tdstelme.net
+    - tellink.com
+    - uslink.net
+  notes: TDS ends its own mail on 2026-10-31; addresses kept by subscribers move to paid Everymail, others close.
+- provider: PenTeleData
+  reason: Pennsylvania ISP mail
+  source: https://autoconfig.thunderbird.net/v1.1/ptd.net
+  domains:
+    - ptd.net
+- provider: Bell Canada
+  reason: Bell Mail for Bell internet customers
+  source: https://support.bell.ca/Internet/Email/How-to-link-my-Bell-Mail-email-addresses
+  domains:
+    - bell.net
+    - sympatico.ca
+- provider: Bell MTS
+  reason: Bell MTS Mail in Manitoba
+  source: https://support.bell.ca/Internet/Email/mts_internet_activating_and_using_mts_mail_account
+  domains:
+    - mtsmail.ca
+    - mymts.net
+  notes: mtsmail.ca is an alias domain for mymts.net mailboxes.
+- provider: Shaw (Rogers)
+  reason: Shaw mail, now run by Rogers
+  source: https://www.rogers.com/support/internet/shaw-email/pop-and-imap-email-server-settings
+  domains:
+    - shaw.ca
+- provider: Videotron
+  reason: Videotron WebMail for Quebec internet customers
+  source: https://www.videotron.com/en/support/internet/email/videotron-webmail
+  domains:
+    - videotron.ca
+- provider: Telstra
+  reason: Telstra Mail, formerly BigPond
+  source: https://www.telstra.com.au/support/email/imap-pop-smtp-mail-server-settings
+  domains:
+    - bigpond.com
+    - bigpond.net.au
+    - telstra.com
+- provider: Telstra (bigpond.net)
+  reason: Legacy BigPond domain on Telstra Mail
+  source: https://autoconfig.thunderbird.net/v1.1/bigpond.com
+  domains:
+    - bigpond.net
+- provider: Spark (Xtra)
+  reason: Spark New Zealand's Xtra Mail
+  source: https://autoconfig.thunderbird.net/v1.1/xtra.co.nz
+  domains:
+    - xtra.co.nz
+  notes: Spark's own help page is behind a bot wall; ISPDB entry links to it.
+- provider: UOL
+  reason: Brazilian webmail and ISP mail
+  source: https://autoconfig.thunderbird.net/v1.1/uol.com.br
+  domains:
+    - uol.com.br
+- provider: BOL (UOL)
+  reason: UOL's free Brazilian webmail
+  source: https://autoconfig.thunderbird.net/v1.1/bol.com.br
+  domains:
+    - bol.com.br
+- provider: BT
+  reason: UK ISP mailboxes (BT Email)
+  source: https://www.bt.com/help/email/manage-email-account/manual-settings/what-are-the-settings-for-outgoing-and-incoming-bt-email-servers
+  domains:
+    - btinternet.com
+    - btopenworld.com
+- provider: BT (talk21)
+  reason: Legacy BT mailbox domain still served by BT Email
+  source: https://github.com/thunderbird/autoconfig/blob/master/ispdb/btinternet.com.xml
+  domains:
+    - talk21.com
+- provider: Virgin Media
+  reason: UK ISP mailboxes (Virgin Media Mail)
+  source: https://www.virginmedia.com/help/change-my-virgin-media-email-address
+  domains:
+    - virginmedia.com
+    - ntlworld.com
+    - virgin.net
+    - blueyonder.co.uk
+- provider: Sky
+  reason: UK ISP mailboxes (Sky Yahoo Mail)
+  source: https://github.com/thunderbird/autoconfig/blob/master/ispdb/sky.com.xml
+  domains:
+    - sky.com
+  notes: Sky closes accounts that are not signed in to regularly.
+- provider: TalkTalk
+  reason: UK ISP mailboxes (TalkTalk Mail, now run by Everymail)
+  source: https://help-centre.talktalk.co.uk/Email/Access_or_Check_my_email/Using_TalkTalk_Webmail
+  domains:
+    - talktalk.net
+  notes: Free for TalkTalk broadband customers, paid for former customers.
+- provider: Plusnet
+  reason: UK ISP mailboxes (moved to Greenby in 2025)
+  source: https://www.plus.net/help/email-guides/how-to-use-plusnet-email/
+  domains:
+    - plus.com
+    - force9.co.uk
+    - free-online.net
+  notes: Addresses use a per-account subdomain of plus.com.
+- provider: Zen Internet
+  reason: UK ISP mailboxes
+  source: https://www.zen.co.uk/help-support/emaildetails/
+  domains:
+    - zen.co.uk
+- provider: Orange France
+  reason: French ISP mailboxes (Mail Orange)
+  source: https://github.com/thunderbird/autoconfig/blob/master/ispdb/orange.fr.xml
+  domains:
+    - orange.fr
+    - wanadoo.fr
+  notes: wanadoo.fr is the legacy Orange domain, still served.
+- provider: Free
+  reason: French ISP mailboxes (Freebox)
+  source: https://github.com/thunderbird/autoconfig/blob/master/ispdb/free.fr.xml
+  domains:
+    - free.fr
+- provider: SFR
+  reason: French ISP mailboxes (SFR Mail)
+  source: https://github.com/thunderbird/autoconfig/blob/master/ispdb/sfr.fr.xml
+  domains:
+    - sfr.fr
+    - neuf.fr
+    - club-internet.fr
+- provider: La Poste
+  reason: French free webmail (laposte.net)
+  source: https://github.com/thunderbird/autoconfig/blob/master/ispdb/laposte.net.xml
+  domains:
+    - laposte.net
+- provider: Deutsche Telekom
+  reason: German ISP mailboxes (Telekom Mail)
+  source: https://github.com/thunderbird/autoconfig/blob/master/ispdb/t-online.de.xml
+  domains:
+    - t-online.de
+    - magenta.de
+- provider: freenet
+  reason: German webmail (freenet Mail)
+  source: https://autoconfig.freenet.de/mail/config-v1.1.xml
+  domains:
+    - freenet.de
+- provider: Vodafone Germany
+  reason: German ISP mailboxes, including legacy Arcor and Kabel Deutschland
+  source: https://github.com/thunderbird/autoconfig/blob/master/ispdb/vodafonemail.de.xml
+  domains:
+    - vodafonemail.de
+    - vodafone.de
+    - arcor.de
+    - kabelmail.de
+- provider: Vodafone Germany (Kabel BW)
+  reason: Legacy Kabel BW cable ISP mailboxes now on Vodafone Mail
+  source: https://autoconfig.kabelbw.de/mail/config-v1.1.xml
+  domains:
+    - kabelbw.de
+  notes: Provider-hosted autoconfig for this domain points to Vodafone Mail servers.
+- provider: Vodafone Germany (Unitymedia)
+  reason: Legacy Unitymedia cable ISP mailboxes now on Vodafone Mail
+  source: https://autoconfig.unitybox.de/mail/config-v1.1.xml
+  domains:
+    - unitybox.de
+  notes: Provider-hosted autoconfig for this domain points to Vodafone Mail servers.
+- provider: 1&1
+  reason: German ISP mailboxes
+  source: https://github.com/thunderbird/autoconfig/blob/master/ispdb/1und1.de.xml
+  domains:
+    - online.de
+    - onlinehome.de
+- provider: EWE
+  reason: German regional ISP mailboxes (EWE Mail)
+  source: https://autoconfig.ewe.net/mail/config-v1.1.xml
+  domains:
+    - ewe.net
+    - ewetel.net
+    - teleos-web.de
+- provider: osnatel
+  reason: German regional ISP mailboxes
+  source: https://autoconfig.osnanet.de/mail/config-v1.1.xml
+  domains:
+    - osnanet.de
+- provider: A1 Telekom Austria
+  reason: Austrian ISP mailboxes
+  source: https://github.com/thunderbird/autoconfig/blob/master/ispdb/a1.net.xml
+  domains:
+    - a1.net
+    - aon.at
+- provider: LIWEST
+  reason: Austrian cable ISP mailboxes
+  source: https://autoconfig.liwest.at/mail/config-v1.1.xml
+  domains:
+    - liwest.at
+- provider: Swisscom
+  reason: Swiss ISP mailboxes (Bluewin)
+  source: https://github.com/thunderbird/autoconfig/blob/master/ispdb/bluewin.ch.xml
+  domains:
+    - bluewin.ch
+    - bluemail.ch
+- provider: Sunrise
+  reason: Swiss ISP mailboxes (former UPC Cablecom)
+  source: https://autoconfig.hispeed.ch/mail/config-v1.1.xml
+  domains:
+    - hispeed.ch
+  notes: Provider-hosted autoconfig on Sunrise infrastructure.
+- provider: Sunrise (swissonline)
+  reason: Legacy Swiss ISP mailbox domain on Sunrise mail servers
+  source: https://autoconfig.swissonline.ch/mail/config-v1.1.xml
+  domains:
+    - swissonline.ch
+  notes: Provider-hosted autoconfig points to the hispeed.ch mail servers.
+- provider: Quickline
+  reason: Swiss cable ISP mailboxes
+  source: https://autoconfig.quickline.ch/mail/config-v1.1.xml
+  domains:
+    - quickline.ch
+- provider: Libero (Italiaonline)
+  reason: Italian webmail
+  source: https://github.com/thunderbird/autoconfig/blob/master/ispdb/libero.it.xml
+  domains:
+    - libero.it
+    - iol.it
+    - blu.it
+    - inwind.it
+    - giallo.it
+- provider: Virgilio (Italiaonline)
+  reason: Italian webmail
+  source: https://github.com/thunderbird/autoconfig/blob/master/ispdb/virgilio.it.xml
+  domains:
+    - virgilio.it
+- provider: TIM (Alice)
+  reason: Italian ISP mailboxes, legacy Alice domain
+  source: https://github.com/thunderbird/autoconfig/blob/master/ispdb/alice.it.xml
+  domains:
+    - alice.it
+- provider: TIM
+  reason: Italian ISP mailboxes (TIM Mail)
+  source: https://github.com/thunderbird/autoconfig/blob/master/ispdb/tim.it.xml
+  domains:
+    - tim.it
+- provider: Tiscali Italy
+  reason: Italian ISP mailboxes
+  source: https://github.com/thunderbird/autoconfig/blob/master/ispdb/tiscali.it.xml
+  domains:
+    - tiscali.it
+- provider: Fastweb
+  reason: Italian ISP mailboxes
+  source: https://github.com/thunderbird/autoconfig/blob/master/ispdb/fastwebnet.it.xml
+  domains:
+    - fastwebnet.it
+- provider: Email.it
+  reason: Italian webmail (now operated by Inbox.com AS)
+  source: https://www.email.it/faq
+  domains:
+    - email.it
+- provider: KPN
+  reason: Dutch ISP mailboxes, including legacy Planet, XS4ALL, Telfort and Tiscali NL domains
+  source: https://github.com/thunderbird/autoconfig/blob/master/ispdb/kpnmail.nl.xml
+  domains:
+    - kpnmail.nl
+    - kpnplanet.nl
+    - planet.nl
+    - wxs.nl
+    - hetnet.nl
+    - freeler.nl
+    - snelnet.net
+    - on.nl
+    - onsbrabantnet.nl
+    - onsmail.nl
+    - onsnet.nu
+    - onsneteindhoven.nl
+    - onsnetnuenen.nl
+    - xs4all.nl
+    - telfort.nl
+    - tip.nl
+    - tiscali.nl
+    - tiscalimail.nl
+- provider: Ziggo
+  reason: Dutch cable ISP mailboxes, including legacy Casema, UPC, @Home and Multikabel domains
+  source: https://github.com/thunderbird/autoconfig/blob/master/ispdb/ziggo.nl.xml
+  domains:
+    - ziggo.nl
+    - ziggomail.com
+    - casema.nl
+    - hahah.nl
+    - zinders.nl
+    - zeggis.nl
+    - zeggis.com
+    - razcall.nl
+    - razcall.com
+    - upcmail.nl
+    - chello.nl
+    - multiweb.nl
+    - home.nl
+    - quicknet.nl
+- provider: ZeelandNet
+  reason: Dutch regional ISP mailboxes
+  source: https://github.com/thunderbird/autoconfig/blob/master/ispdb/zeelandnet.nl.xml
+  domains:
+    - zeelandnet.nl
+- provider: DDS
+  reason: Dutch ISP mailboxes (De Digitale Stad)
+  source: https://autoconfig.dds.nl/mail/config-v1.1.xml
+  domains:
+    - dds.nl
+- provider: Proximus
+  reason: Belgian ISP mailboxes, including legacy Skynet and Belgacom
+  source: https://github.com/thunderbird/autoconfig/blob/master/ispdb/skynet.be.xml
+  domains:
+    - skynet.be
+    - proximus.be
+    - belgacom.net
+    - kidcity.be
+- provider: Telia
+  reason: Swedish ISP mailboxes
+  source: https://autoconfig.telia.com/mail/config-v1.1.xml
+  domains:
+    - telia.com
+- provider: YouSee (mail.dk)
+  reason: Danish ISP mailboxes
+  source: https://github.com/thunderbird/autoconfig/blob/master/ispdb/mail.dk.xml
+  domains:
+    - mail.dk
+- provider: Jubii
+  reason: Danish webmail (now operated by Inbox.com AS) with 150+ vanity domains
+  source: https://www.jubii.dk/faq
+  domains:
+    - 123mail.dk
+    - 12fuel.dk
+    - 12mail.dk
+    - 12move.dk
+    - 2night.dk
+    - 2senior.dk
+    - 9260.dk
+    - anarki.dk
+    - anderledes.dk
+    - backbone.dk
+    - bedstemail.dk
+    - begavet.dk
+    - bemybaby.dk
+    - bitnisse.dk
+    - christensen.dk
+    - christiansen.dk
+    - city.dk
+    - cool.dk
+    - cyberdude.dk
+    - cyberjunkie.dk
+    - dancemail.dk
+    - e-box.dk
+    - e-mail.dk
+    - e-postboks.dk
+    - elsker.dk
+    - elvis.dk
+    - email.dk
+    - energimail.dk
+    - energipost.dk
+    - enfiber.dk
+    - eriksen.dk
+    - fald.dk
+    - fedt.dk
+    - feminin.dk
+    - fiberboks.dk
+    - fiberbolig.dk
+    - fiberfart.dk
+    - fiberhjem.dk
+    - fiberhuset.dk
+    - fibermail.dk
+    - fibernu.dk
+    - fibernyt.dk
+    - fiberpost.dk
+    - flirt.dk
+    - forening.dk
+    - fraekkert.dk
+    - frandsen.dk
+    - frederiksen.dk
+    - frederiksen.net
+    - funkymail.dk
+    - gaf-net.dk
+    - gason.dk
+    - gefiber.dk
+    - gefibermail.dk
+    - gefiberpost.dk
+    - grin.dk
+    - groovymail.dk
+    - grov.dk
+    - hammergod.dk
+    - hansen.dk
+    - hardworking.dk
+    - heaven.dk
+    - hemmelig.dk
+    - henningsen.dk
+    - henriksen.dk
+    - henriksen.net
+    - hippie.dk
+    - holm.net
+    - huleboer.dk
+    - husk-mig.dk
+    - iloveu.dk
+    - indbakke.dk
+    - info.dk
+    - io.dk
+    - it.dk
+    - iversen.dk
+    - jacobsen.dk
+    - jakobsen.dk
+    - johansen.dk
+    - jubii.dk
+    - jubiichat.dk
+    - jubiiconnect.dk
+    - jubiigames.dk
+    - jubiimail.dk
+    - jubiipost.dk
+    - jubiipostadresse.dk
+    - jyde.dk
+    - klog.dk
+    - knudsen.dk
+    - knus.dk
+    - krudt.dk
+    - kulturel.dk
+    - kvalme.dk
+    - larsen.dk
+    - laursen.dk
+    - lazy.dk
+    - lystig.dk
+    - madsen.dk
+    - madsen.net
+    - mail-mig.dk
+    - mail.jubii.dk
+    - mail4.dk
+    - mail6.dk
+    - mail8.dk
+    - maildanmark.dk
+    - mailster.dk
+    - manmail.dk
+    - maskulin.dk
+    - mathiesen.dk
+    - mikaelsen.dk
+    - mikkelsen.dk
+    - min-postkasse.dk
+    - minprivatemail.dk
+    - mortensen.dk
+    - musling.dk
+    - natteliv.dk
+    - netbruger.dk
+    - nicemail.dk
+    - olesen.dk
+    - olesen.net
+    - pedal.dk
+    - pedersen.dk
+    - pedersen.net
+    - pengemand.dk
+    - petersen.dk
+    - pokerface.dk
+    - popme.dk
+    - postman.dk
+    - poulsen.dk
+    - poulsen.net
+    - privatmail.dk
+    - privatpost.dk
+    - rasmussen.dk
+    - rasmussen.net
+    - ready.dk
+    - retromail.dk
+    - ringmybell.dk
+    - secret.dk
+    - sexysurfer.dk
+    - simonsen.dk
+    - skrivnu.dk
+    - sleepy.dk
+    - sorensen.dk
+    - sporty.dk
+    - submail.dk
+    - svendsen.dk
+    - talent.dk
+    - tanke.dk
+    - tastmig.dk
+    - teknik.dk
+    - thomsen.dk
+    - trashcan.dk
+    - trustme.dk
+    - vestergaard.dk
+    - video.dk
+    - vittig.dk
+    - wildwildweb.dk
+    - zoomail.dk
+    - zybermail.dk
+  notes: Vanity names like trashcan.dk, secret.dk and nicemail.dk are real Jubii mailboxes.
+- provider: Luukku
+  reason: Finnish webmail (now operated by Inbox.com AS)
+  source: https://www.luukku.com/faq
+  domains:
+    - luukku.com
+- provider: Inbox.lv
+  reason: Baltic webmail (Latvia, Lithuania)
+  source: https://github.com/thunderbird/autoconfig/blob/master/ispdb/inbox.lv.xml
+  domains:
+    - inbox.lt
+    - inbox.la
+- provider: Mail.ee
+  reason: Estonian free webmail
+  source: https://github.com/thunderbird/autoconfig/blob/master/ispdb/mail.ee.xml
+  domains:
+    - mail.ee
+- provider: Wirtualna Polska
+  reason: Polish webmail (Poczta WP)
+  source: https://github.com/thunderbird/autoconfig/blob/master/ispdb/wp.pl.xml
+  domains:
+    - wp.pl
+- provider: o2 Poczta
+  reason: Polish webmail (o2, Tlen)
+  source: https://github.com/thunderbird/autoconfig/blob/master/ispdb/o2.pl.xml
+  domains:
+    - o2.pl
+    - go2.pl
+    - tlen.pl
+    - prokonto.pl
+- provider: Onet Poczta
+  reason: Polish webmail
+  source: https://github.com/thunderbird/autoconfig/blob/master/ispdb/onet.pl.xml
+  domains:
+    - onet.pl
+    - onet.eu
+    - poczta.onet.pl
+    - poczta.onet.eu
+    - op.pl
+    - vp.pl
+    - autograf.pl
+    - buziaczek.pl
+    - amorki.pl
+    - republika.pl
+    - adres.pl
+    - cyberia.pl
+    - onet.com.pl
+    - opoczta.pl
+    - pseudonim.pl
+    - spoko.pl
+    - vip.onet.pl
+- provider: Interia
+  reason: Polish webmail (Poczta Interia)
+  source: https://pomoc.poczta.interia.pl/podstawowe-informacje/news-co-oferujemy,nId,23544627
+  domains:
+    - interia.pl
+    - interia.eu
+    - poczta.fm
+    - vip.interia.pl
+    - intmail.pl
+    - interia.com
+    - interiowy.pl
+    - adresik.net
+    - pisz.to
+    - pacz.to
+    - ogarnij.se
+    - hub.pl
+  notes: hub.pl is used as name.hub.pl subdomains for paid Poczta PRO accounts.
+- provider: Gazeta.pl
+  reason: Polish webmail (Poczta Gazeta.pl)
+  source: https://pomoc.gazeta.pl/pomoc/7,154322,32746451,instrukcja-konfiguracji-konta-e-mail-thunderbird-outlook.html
+  domains:
+    - gazeta.pl
+- provider: Seznam
+  reason: Czech webmail (Email.cz)
+  source: https://github.com/thunderbird/autoconfig/blob/master/ispdb/seznam.cz.xml
+  domains:
+    - seznam.cz
+    - email.cz
+    - post.cz
+    - spoluzaci.cz
+- provider: Tiscali.cz
+  reason: Czech webmail
+  source: https://email.tiscali.cz/
+  domains:
+    - tiscali.cz
+    - wo.cz
+    - worldonline.cz
+    - worldmail.cz
+- provider: Rambler
+  reason: Russian webmail (Rambler Mail)
+  source: https://github.com/thunderbird/autoconfig/blob/master/ispdb/rambler.ru.xml
+  domains:
+    - rambler.ru
+- provider: UKR.NET
+  reason: Ukrainian webmail
+  source: https://autoconfig.ukr.net/mail/config-v1.1.xml
+  domains:
+    - ukr.net
+- provider: I.UA
+  reason: Ukrainian webmail
+  source: https://www.i.ua/
+  domains:
+    - i.ua
+    - ua.fm
+    - email.ua
+    - 3g.ua
+    - football.ua
+  notes: Domains are the choices in the sign-in form.
+- provider: Freemail
+  reason: Hungarian webmail
+  source: https://autoconfig.freemail.hu/mail/config-v1.1.xml
+  domains:
+    - freemail.hu
+- provider: Citromail
+  reason: Hungarian webmail (now operated by Inbox.com AS)
+  source: https://www.citromail.hu/faq
+  domains:
+    - citromail.hu
+- provider: Indamail
+  reason: Hungarian webmail (now operated by Inbox.com AS)
+  source: https://indamail.hu/faq
+  domains:
+    - indamail.hu
+- provider: OTEnet (Cosmote)
+  reason: Greek ISP mailboxes
+  source: https://autoconfig.otenet.gr/mail/config-v1.1.xml
+  domains:
+    - otenet.gr
+- provider: SAPO
+  reason: Portuguese webmail (SAPO Mail, MEO)
+  source: https://github.com/thunderbird/autoconfig/blob/master/ispdb/sapo.pt.xml
+  domains:
+    - sapo.pt
+    - sapo.cv
+    - sapo.ao
+    - sapo.mz
+    - sapo.tl
+    - meo.pt
+- provider: ABV
+  reason: Bulgarian webmail (ABV Poshta)
+  source: https://passport.abv.bg/app/profiles/registration
+  domains:
+    - abv.bg
+- provider: Dir.bg
+  reason: Bulgarian webmail
+  source: https://mail.dir.bg/
+  domains:
+    - dir.bg
+- provider: Telekom Slovenije (SiOL)
+  reason: Slovenian ISP mailboxes
+  source: https://autoconfig.siol.net/mail/config-v1.1.xml
+  domains:
+    - siol.net
+    - siol.com
+- provider: T-2
+  reason: Slovenian ISP mailboxes
+  source: https://autoconfig.t-2.net/mail/config-v1.1.xml
+  domains:
+    - t-2.net
+- provider: Walla
+  reason: Israeli webmail (Walla Mail)
+  source: https://friends.walla.co.il/
+  domains:
+    - walla.co.il
+    - walla.com
+  notes: Both domains appear in the sign-in page script as the user address suffix.
+- provider: QQ Mail
+  reason: Tencent's mail service; qq.com, foxmail.com and vip.qq.com are account names of one QQ mailbox
+  source: https://service.mail.qq.com/detail/0/262
+  domains:
+    - qq.com
+    - foxmail.com
+    - vip.qq.com
+- provider: NetEase Mail
+  reason: NetEase's free mail service, one of the largest in China
+  source: https://help.mail.163.com/
+  domains:
+    - 163.com
+    - 126.com
+    - yeah.net
+- provider: Sina Mail
+  reason: Sina's free mail service
+  source: https://mail.sina.com.cn/
+  domains:
+    - sina.com
+    - sina.cn
+- provider: Sohu Mail
+  reason: Sohu's free mail service
+  source: https://1cbbb2d148753.cdn.sohucs.com/e0de4a/js/controller/loginCtrl.590be1bc.js
+  domains:
+    - sohu.com
+    - me.sohu.com
+  notes: The domains come from the login form's domain selector, a script loaded by https://mail.sohu.com/.
+- provider: Aliyun Mail
+  reason: Alibaba Cloud's free personal mail service
+  source: https://help.aliyun.com/zh/document_detail/464807.html
+  domains:
+    - aliyun.com
+  notes: Closed to new sign-ups since 2025-03-26; existing mailboxes keep working.
+- provider: 139 Mail
+  reason: China Mobile's mail service, addressed by phone number
+  source: https://help.mail.10086.cn/statichtml/0/Content/839.html
+  domains:
+    - 139.com
+- provider: TOM Mail
+  reason: TOM Group's free and paid mail service
+  source: https://mail.tom.com/
+  domains:
+    - tom.com
+    - 163.net
+    - 163vip.com
+    - vip.tom.com
+- provider: Netvigator
+  reason: HKT's home broadband ISP mail
+  source: https://www.netvigator.com/eng/tips-and-tutorials/email.html
+  domains:
+    - netvigator.com
+    - hkstar.com
+- provider: Naver Mail
+  reason: Naver's mail service, the largest in Korea
+  source: https://autoconfig.thunderbird.net/v1.1/naver.com
+  domains:
+    - naver.com
+- provider: Daum Mail
+  reason: Kakao's Daum mail service
+  source: https://cs.daum.net/faq/service/43/category/4592
+  domains:
+    - daum.net
+    - hanmail.net
+- provider: Kakao Mail
+  reason: Kakao's mail service
+  source: https://t1.kakaocdn.net/kakaomail_static/mint/dist/1.2.7/static/js/index-B887dk7l.js
+  domains:
+    - kakao.com
+  notes: The domain comes from the web app script loaded by https://mail.kakao.com/.
+- provider: Nate Mail
+  reason: SK Communications' mail service; empas.com is the legacy Empas mail domain served by the same login
+  source: https://home.mail.nate.com/login/login.html?s=mail&redirect=https%3A%2F%2Fmail3.nate.com%2F
+  domains:
+    - nate.com
+    - empas.com
+  notes: The login page sets nate.com as the default domain and asks Empas users to type @empas.com.
+- provider: NTT docomo
+  reason: Japan's largest mobile carrier; docomo.ne.jp is carrier mail and mopera.net is its mopera U ISP mail
+  source: https://id.smt.docomo.ne.jp/src/utility/mailtype.html
+  domains:
+    - docomo.ne.jp
+    - mopera.net
+- provider: SoftBank
+  reason: SoftBank's carrier mail (MMS and iPhone Eメール(i))
+  source: https://www.softbank.jp/support/faq/view/10724
+  domains:
+    - softbank.ne.jp
+    - i.softbank.jp
+- provider: SoftBank (Disney Mobile)
+  reason: Disney Mobile carrier mail, now part of SoftBank
+  source: https://id.smt.docomo.ne.jp/src/utility/mailtype.html
+  domains:
+    - disney.ne.jp
+- provider: SoftBank (Vodafone legacy)
+  reason: Regional Vodafone-era carrier mail domains that SoftBank customers still use
+  source: https://kisei.qsr.mlit.go.jp/gpc/domain.html
+  domains:
+    - c.vodafone.ne.jp
+    - d.vodafone.ne.jp
+    - h.vodafone.ne.jp
+    - k.vodafone.ne.jp
+    - n.vodafone.ne.jp
+    - q.vodafone.ne.jp
+    - r.vodafone.ne.jp
+    - s.vodafone.ne.jp
+    - t.vodafone.ne.jp
+  notes: Government (MLIT) page listing carrier domains; SoftBank's own FAQ gives only the pattern x.vodafone.ne.jp.
+- provider: au (KDDI)
+  reason: KDDI's au carrier mail
+  source: https://www.au.com/support/faq/details/00/0000/000002/pg00000276/
+  domains:
+    - au.com
+    - ezweb.ne.jp
+- provider: au (IDO legacy)
+  reason: IDO-era carrier mail, now part of au
+  source: https://id.smt.docomo.ne.jp/src/utility/mailtype.html
+  domains:
+    - ido.ne.jp
+- provider: UQ mobile
+  reason: KDDI's UQ mobile carrier mail
+  source: https://www.uqwimax.jp/mobile/plan/option/mail/
+  domains:
+    - uqmobile.jp
+- provider: Y!mobile
+  reason: SoftBank's Y!mobile carrier mail
+  source: https://www.ymobile.jp/service/ymobile/mail/
+  domains:
+    - yahoo.ne.jp
+- provider: Y!mobile (legacy carrier domains)
+  reason: Y!mobile, WILLCOM and EMOBILE carrier mail domains, all now Y!mobile
+  source: https://id.smt.docomo.ne.jp/src/utility/mailtype.html
+  domains:
+    - ymobile.ne.jp
+    - ymobile1.com
+    - y-mobile.ne.jp
+    - pdx.ne.jp
+    - willcom.com
+    - wcm.ne.jp
+    - emnet.ne.jp
+    - emobile.ne.jp
+    - emobile-s.ne.jp
+- provider: Rakuten Mobile
+  reason: Rakuten Mobile's carrier mail (楽メール and the older Rメール)
+  source: https://network.mobile.rakuten.co.jp/service/rakumail/
+  domains:
+    - rakumail.jp
+    - rakuten.jp
+- provider: Yahoo! JAPAN Mail
+  reason: LY Corporation's Yahoo! JAPAN mail service
+  source: https://autoconfig.thunderbird.net/v1.1/yahoo.co.jp
+  domains:
+    - yahoo.co.jp
+- provider: Yahoo! JAPAN Mail (ymail.ne.jp)
+  reason: Second address domain of Yahoo! JAPAN mail
+  source: https://mail.yahoo.co.jp/promo/
+  domains:
+    - ymail.ne.jp
+- provider: Yahoo! BB
+  reason: SoftBank's Yahoo! BB ISP mail
+  source: https://autoconfig.thunderbird.net/v1.1/ybb.ne.jp
+  domains:
+    - ybb.ne.jp
+- provider: "@nifty"
+  reason: NIFTY's ISP and webmail service
+  source: https://mail.nifty.com/info/
+  domains:
+    - nifty.com
+  notes: Extra addresses use random subdomains (mb*.nifty.com, sp*.nifty.com); match nifty.com as a suffix.
+- provider: BIGLOBE
+  reason: BIGLOBE ISP mail
+  source: https://autoconfig.thunderbird.net/v1.1/biglobe.ne.jp
+  domains:
+    - biglobe.ne.jp
+- provider: OCN
+  reason: NTT docomo's OCN ISP mail
+  source: https://autoconfig.thunderbird.net/v1.1/ocn.ne.jp
+  domains:
+    - ocn.ne.jp
+  notes: Addresses sit on subdomains (****.ocn.ne.jp); match ocn.ne.jp as a suffix.
+- provider: IIJmio
+  reason: IIJ's consumer ISP mail
+  source: https://autoconfig.thunderbird.net/v1.1/iijmio-mail.jp
+  domains:
+    - iijmio-mail.jp
+    - miomio.jp
+    - miobox.jp
+    - e23.jp
+    - x-il.jp
+- provider: IIJ4U
+  reason: IIJ's older consumer ISP mail
+  source: https://autoconfig.thunderbird.net/v1.1/dd.iij4u.or.jp
+  domains:
+    - dd.iij4u.or.jp
+    - ff.iij4u.or.jp
+    - hh.iij4u.or.jp
+    - kk.iij4u.or.jp
+    - nn.iij4u.or.jp
+    - pp.iij4u.or.jp
+    - rr.iij4u.or.jp
+    - ss.iij4u.or.jp
+    - bc.iij4u.or.jp
+    - bk.iij4u.or.jp
+    - bp.iij4u.or.jp
+    - bu.iij4u.or.jp
+- provider: Rediffmail
+  reason: Rediff.com's free mail service
+  source: https://register.rediff.com/register/register.php?FormName=user_details
+  domains:
+    - rediffmail.com
+- provider: Mweb
+  reason: Mweb ISP mail, including the legacy iafrica.com addresses
+  source: https://help.mweb.co.za/articles/mail/security/dmarc-policy
+  domains:
+    - mweb.co.za
+    - iafrica.com
+- provider: Webmail.co.za
+  reason: Long-running South African webmail, now a paid subscription service run by Inbox.com AS
+  source: https://www.webmail.co.za/faq
+  domains:
+    - webmail.co.za
+- provider: Telenet
+  reason: Belgian cable ISP mailboxes
+  source: https://www2.telenet.be/residential/nl/klantenservice/internet/e-mail/wat-met-mijn-pandora-be-en-chello-be-e-mailadres.html
+  domains:
+    - telenet.be
+    - pandora.be
+  notes: Legacy @pandora.be addresses still receive mail; sign-in now uses the matching @telenet.be name.
+- provider: Telenor Norway (Online)
+  reason: Norwegian ISP webmail (Online e-post)
+  source: https://www.telenor.no/kundeservice/e-post/oppsett/
+  domains:
+    - online.no
+- provider: 21CN Mail
+  reason: Chinese mail provider with lasting mailboxes
+  source: https://mail.21cn.com
+  domains:
+    - 21cn.com
+- provider: Mail2World
+  reason: Long-running mail provider that still runs its own mail servers
+  source: https://www.mail2world.com
+  domains:
+    - mail2world.com
+- provider: SDF Public Access UNIX System
+  reason: Nonprofit with lasting member accounts and mailboxes since 1987
+  source: https://sdf.org
+  domains:
+    - sdf.org
+- provider: Yandex infrastructure
+  reason: Yandex's own domain; its mail goes to mx.yandex.ru
+  source: https://yandex.com
+  domains:
+    - yandex.net
+- provider: Sify
+  reason: Indian ISP whose mail is hosted on Microsoft 365
+  source: https://www.sify.com
+  domains:
+    - sify.com
+- provider: Express.net.ua
+  reason: Ukrainian ISP that runs its own mail relays for customers
+  source: https://express.net.ua
+  domains:
+    - express.net.ua
+- provider: in-ulm.de
+  reason: Regional provider in Ulm that runs its own mail gateway
+  source: https://www.in-ulm.de
+  domains:
+    - in-ulm.de
+- provider: Organization domains found on community lists
+  reason: Real organizations whose mail is hosted on Microsoft 365, Google Workspace, Mimecast, Feishu, Infomaniak or Tencent business mail; checked by MX lookup on 2026-10-01
+  domains:
+    - 99.com
+    - allsquaregolf.com
+    - aver.com
+    - dpam.com
+    - gofo.com
+    - hayalhost.com
+    - joi.com
+    - onit.com
+    - salla.dev
+    - samaki.com
+- provider: Forward Email
+  reason: Forward Email's own company domain; its shared alias domains are in relays.yml
+  source: https://forwardemail.net
+  domains:
+    - forwardemail.net
+- provider: Regional providers confirmed only by third parties
+  reason: Real ISP and webmail domains named in Thunderbird's ISP database, press coverage or a provider's mail server settings, whose own sign-up pages could not be read. Allowlisting a real provider costs nothing; listing one refuses real people.
+  domains:
+    - rogers.com
+    - frontier.com
+    - frontiernet.net
+    - citlink.net
+    - juno.com
+    - netzero.net
+    - netzero.com
+    - optonline.net
+    - optimum.net
+    - suddenlink.net
+    - qwest.net
+    - mchsi.com
+    - fuse.net
+    - zoomtown.com
+    - fairpoint.net
+    - sonic.net
+    - telus.net
+    - cogeco.ca
+    - eastlink.ca
+    - sasktel.net
+    - optusnet.com.au
+    - tpg.com.au
+    - iinet.net.au
+    - westnet.com.au
+    - internode.on.net
+    - terra.com.br
+    - ig.com.br
+    - globo.com
+    - globomail.com
+    - prodigy.net.mx
+    - bhn.com
+    - austin.rr.com
+    - ca.rr.com
+    - carolina.rr.com
+    - cinci.rr.com
+    - columbus.rr.com
+    - dc.rr.com
+    - ec.rr.com
+    - elmore.rr.com
+    - elp.rr.com
+    - eufaula.rr.com
+    - gt.rr.com
+    - hawaii.rr.com
+    - hot.rr.com
+    - hvc.rr.com
+    - insight.rr.com
+    - kc.rr.com
+    - ma.rr.com
+    - maine.rr.com
+    - mass.rr.com
+    - nc.rr.com
+    - ne.rr.com
+    - neb.rr.com
+    - neo.rr.com
+    - new.rr.com
+    - nj.rr.com
+    - nyc.rr.com
+    - oh.rr.com
+    - pa.rr.com
+    - rgv.rr.com
+    - rochester.rr.com
+    - san.rr.com
+    - satx.rr.com
+    - sc.rr.com
+    - si.rr.com
+    - socal.rr.com
+    - stny.rr.com
+    - stx.rr.com
+    - sw.rr.com
+    - triad.rr.com
+    - twcny.rr.com
+    - tx.rr.com
+    - wi.rr.com
+    - woh.rr.com
+    - vip.163.com
+    - vip.126.com
+    - 188.com
+    - vip.sina.com
+    - vip.sohu.com
+    - 189.cn
+    - wo.cn
+    - msa.hinet.net
+    - pchome.com.tw
+    - singnet.com.sg
+    - starhub.net.sg
+    - pacific.net.sg
+    - tm.net.my
+    - streamyx.com
+    - so-net.ne.jp
+    - plala.or.jp
+    - ocn.ad.jp
+    - jp-c.ne.jp
+    - jp-d.ne.jp
+    - jp-h.ne.jp
+    - jp-k.ne.jp
+    - jp-n.ne.jp
+    - jp-q.ne.jp
+    - jp-r.ne.jp
+    - jp-s.ne.jp
+    - jp-t.ne.jp
+    - lycos.co.kr
+    - netsgo.com
+    - telkomsa.net
+    - emirates.net.ae
+    - tiscali.co.uk
+    - lineone.net
+    - tinyworld.co.uk
+    - pipex.com
+    - orange.net
+    - orangehome.co.uk
+    - wanadoo.co.uk
+    - freeserve.co.uk
+    - fsmail.net
+    - fsnet.co.uk
+    - fsworld.co.uk
+    - btconnect.com
+    - metronet.co.uk
+    - madasafish.com
+    - bbox.fr
+    - cegetel.net
+    - numericable.fr
+    - noos.fr
+    - 9online.fr
+    - aliceadsl.fr
+    - chello.at
+    - sunrise.ch
+    - tin.it
+    - telefonica.net
+    - movistar.es
+    - terra.es
+    - ono.com
+    - scarlet.be
+    - bredband.net
+    - comhem.se
+    - spray.se
+    - saunalahti.fi
+    - elisa.fi
+    - suomi24.fi
+    - stofanet.dk
+    - neti.ee
+    - online.ee
+    - vipmail.hu
+    - centrum.cz
+    - atlas.cz
+    - volny.cz
+    - azet.sk
+    - centrum.sk
+    - post.sk
+    - pobox.sk
+    - lenta.ru
+    - autorambler.ru
+    - myrambler.ru
+    - ro.ru
+    - meta.ua
+    - mail.bg
+    - netvision.net.il
+    - bezeqint.net
+    - 012.net.il
+    - chmail.ir
+    - mihanmail.ir
+    - mynet.com
+    - contractor.com
+    - yandex.com.tr
+    - my.com
+    - alpenjodel.de
+    - alphafrau.de
+    - betriebsdirektor.de
+    - bin-wieder-da.de
+    - caramail.com
+    - caramail.fr
+    - cool.ms
+    - coole-files.de
+    - deutschland.ms
+    - flirt.ms
+    - gentlemansclub.de
+    - gmx-topmail.de
+    - gmxpro.de
+    - gmxpro.net
+    - ich-habe-fertig.com
+    - ich-will-net.de
+    - ich.ms
+    - imail.de
+    - ist-allein.info
+    - ist-willig.de
+    - mailueberfall.de
+    - netterchef.de
+    - party.ms
+    - planet.ms
+    - power.ms
+    - public-files.de
+    - singles.ms
+    - smart.ms
+    - streber24.de
+    - topmail-files.de
+    - vorsicht-scharf.de
+    - wichtig.ms
+    - women-at-work.org
+    - libertymail.com
+    - disr.it
+    - secure.mailbox.org
+    - lycos.com
+    - soverin.net
+    - zohomail.jp
+    - 33m.co
+    - burnermail.io
+    - cloaked.id
+    - anonddy.com

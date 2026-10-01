@@ -1,0 +1,138 @@
+# Lasting forwarding and alias services. They forward to a real inbox, so they are
+# never on the main list; relays.txt publishes them for sites to decide for themselves.
+# Services whose addresses expire by design (TrashMail, Spamgourmet, Jetable) are on the
+# main list instead.
+
+- service: Apple Hide My Email (Sign in with Apple)
+  url: https://support.apple.com/en-us/105078
+  source: https://support.apple.com/en-us/105078
+  domains:
+    - privaterelay.appleid.com
+- service: Apple iCloud+ Hide My Email
+  url: https://support.apple.com/guide/icloud/what-you-can-do-with-icloud-and-hide-my-email-mme38e1602db/icloud
+  source: https://support.apple.com/guide/icloud/what-you-can-do-with-icloud-and-hide-my-email-mme38e1602db/icloud
+  domains: []
+  notes: Apple's help pages do not name the domain these addresses use. icloud.com is on the allowlist as Apple's mailbox domain.
+- service: Firefox Relay
+  url: https://relay.firefox.com
+  source: https://relay.firefox.com/faq/
+  domains:
+    - mozmail.com
+    - relay.firefox.com
+  notes: relay.firefox.com was the original mask domain before the switch to mozmail.com. Premium custom subdomains sit under mozmail.com.
+- service: DuckDuckGo Email Protection
+  url: https://duckduckgo.com/email/
+  source: https://spreadprivacy.com/protect-your-inbox-with-duckduckgo-email-protection/
+  domains:
+    - duck.com
+- service: SimpleLogin
+  url: https://simplelogin.io
+  source: https://simplelogin.io/docs/getting-started/restore-alias/
+  domains:
+    - aleeas.com
+    - simplelogin.com
+  notes: Premium users also get subdomains under these domains, such as name.simplelogin.com and name.aleeas.com.
+- service: SimpleLogin (directory domain)
+  url: https://simplelogin.io
+  source: https://simplelogin.io/blog/email-alias-vs-plus-sign/
+  domains:
+    - simplelogin.fr
+- service: SimpleLogin (reverse-alias domain)
+  url: https://simplelogin.io
+  source: https://simplelogin.io/docs/getting-started/reverse-alias/
+  domains:
+    - simplelogin.co
+  notes: Replies to contacts go out through reverse aliases at this domain. It is SimpleLogin's own domain, though people do not sign up with it.
+- service: SimpleLogin (other shared and premium domains)
+  url: https://simplelogin.io
+  source: https://github.com/simple-login/app/issues/1209
+  domains:
+    - 8alias.com
+    - 8shield.net
+    - dralias.com
+    - silomails.com
+    - slmail.me
+    - slmails.com
+  notes: SimpleLogin publishes no domain list. These come from a user-compiled table in SimpleLogin's own issue tracker. On 2026-10-01 each domain's website redirected to simplelogin.io and its MX was mx1/mx2.simplelogin.co.
+- service: Proton Pass aliases
+  url: https://proton.me/pass/aliases
+  source: https://proton.me/blog/benefits-of-email-aliases
+  domains:
+    - passmail.net
+- service: Proton Pass aliases (other alias domains)
+  url: https://proton.me/pass/aliases
+  source: https://protonmail.uservoice.com/forums/953584-proton-pass-authenticator/suggestions/50597918-poor-alias-reputation-blacklisted-proton-alias
+  domains:
+    - passfwd.com
+    - passinbox.com
+    - passmail.com
+  notes: Proton publishes no domain list. These are named on Proton's own feedback board. On 2026-10-01 each domain's website redirected to proton.me/pass and its MX was mx1/mx2.simplelogin.co.
+- service: addy.io (formerly AnonAddy)
+  url: https://addy.io
+  source: https://addy.io/faq/
+  domains:
+    - anonaddy.com
+    - anonaddy.me
+  notes: These are the free-plan shared domains. Each user also gets a username subdomain, such as name.anonaddy.com.
+- service: addy.io (paid shared domains)
+  url: https://addy.io
+  source: https://github.com/anonaddy/browser-extension/blob/master/src/background.js
+  domains:
+    - 4wrd.cc
+    - addy.io
+    - addy.to
+    - addymail.com
+    - mailer.me
+  notes: Taken from the SHARED_DOMAINS set in addy.io's official browser extension; the FAQ refers to them as other premium domains.
+- service: 33mail
+  url: https://www.33mail.com
+  source: https://www.33mail.com/faq
+  domains:
+    - 33mail.com
+  notes: Aliases sit on per-user subdomains, such as anything@username.33mail.com.
+- service: Burner Mail
+  url: https://burnermail.io
+  source: https://burnermail.io/faq
+  domains:
+    - nicoric.com
+  notes: The FAQ's example aliases use nicoric.com (hidden by Cloudflare email obfuscation on the page, decoded). Its MX is mail.burnermail.io.
+- service: Erine.email
+  url: https://erine.email
+  source: https://erine.email/
+  domains:
+    - erine.email
+- service: Forward Email (vanity domains)
+  url: https://forwardemail.net
+  source: https://forwardemail.net/en/disposable-addresses
+  domains:
+    - hash.fyi
+    - hideaddress.net
+    - mailsire.com
+    - secret.fyi
+  notes: Forward Email markets these as disposable addresses; each alias forwards to the owner's existing inbox. Also listed as VANITY_DOMAINS in its open-source repo.
+- service: Fastmail Masked Email
+  url: https://www.fastmail.com/features/masked-email/
+  source: https://www.fastmail.help/hc/en-us/articles/4406536368911-Masked-Email
+  domains: []
+  notes: Masked Email addresses use fastmail.com or the user's own domain. fastmail.com is also on the allowlist. 1Password and Bitwarden create these through Fastmail.
+- service: StartMail aliases
+  url: https://www.startmail.com/aliases
+  source: https://www.startmail.com/aliases
+  domains:
+    - use.startmail.com
+  notes: A user can set an alias to expire, but by default it lasts until disabled or deleted. startmail.com itself is on the allowlist.
+- service: Sneakemail
+  url: https://sneakemail.com
+  source: https://sneakemail.com/
+  domains:
+    - sneakemail.com
+- service: Bitwarden username generator
+  url: https://bitwarden.com/help/generator/
+  source: https://bitwarden.com/help/generator/
+  domains: []
+  notes: No domains of its own. It creates aliases through SimpleLogin, addy.io, Firefox Relay, Fastmail, Forward Email and DuckDuckGo, all listed above.
+- service: Blur masked email (Abine, now IronVest)
+  url: https://ironvest.com
+  notes: Blur's masked addresses forward to the user's real inbox. No live Abine or IronVest page names the domain; it is widely documented as Blur's masking domain and on 2026-10-01 its MX was junkemailfilter.com.
+  domains:
+    - opayq.com

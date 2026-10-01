@@ -1,0 +1,56 @@
+// Shared domains that are missing from the Public Suffix List: free subdomain and
+// dynamic DNS hosts where anyone can create a subdomain. Throwlist treats each one as a
+// public suffix, so the host itself is never listed and a person running their own mail
+// on a subdomain is never refused. A throwaway service's own subdomain on one of these
+// hosts can still be listed.
+//
+// One host per line, in Public Suffix List format.
+
+// From disposable-email-domains' publicsuffixlist.local
+2bd.net
+asso.st
+fr.nf
+infos.st
+jo3.org
+kro.kr
+linkpc.net
+publicvm.com
+run.place
+skymeshdynamics.com
+work.gd
+ze.cx
+
+// FreeDNS (afraid.org)
+chickenkiller.com
+mooo.com
+uk.to
+us.to
+
+// ChangeIP
+25u.com
+4pu.com
+ezua.com
+zyns.com
+
+// Free subdomain hosts found in the first release's review: their listed subdomains
+// belong to different services
+biz.st
+qd.je
+
+// YDNS
+ydns.eu
+
+// dynv6
+dns.army
+dns.navy
+v6.army
+v6.navy
+v6.rocks
+
+// InfinityFree and Hostinger free hosting
+42web.io
+pe.hu
+rf.gd
+
+// The old free .cc subdomain service
+co.cc

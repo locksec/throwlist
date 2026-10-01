@@ -1,0 +1,49 @@
+name: Weekly refresh
+
+# Merges the open lists, reads the watched services, and opens a pull request with the
+# change report. It never merges anything itself.
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: refresh
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run refresh
+      # Pull requests opened with the workflow token do not start other workflows, so the
+      # checks run here before the pull request is opened.
+      - run: npm test
+      - run: npm run check
+      - name: Open a pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet; then
+            echo "Nothing changed."
+            exit 0
+          fi
+          date=$(date -u +%F)
+          branch="refresh/$date"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git commit -am "Weekly refresh $date"
+          git push --force origin "$branch"
+          gh pr create --base main --head "$branch" --title "Weekly refresh $date" --body-file report.md \
+            || gh pr edit "$branch" --body-file report.md

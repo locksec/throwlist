@@ -1,0 +1,47 @@
+name: Monthly MX check
+
+# Records whether each listed domain still has mail servers, and opens a pull request
+# whose description lists domains with mail hosted where real organizations host it.
+# A domain without mail servers is marked in domains.json, never removed.
+
+on:
+  schedule:
+    - cron: '0 6 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: refresh
+
+jobs:
+  mx:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run mx
+      - run: npm run check
+      - name: Open a pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet; then
+            echo "Nothing changed."
+            exit 0
+          fi
+          date=$(date -u +%F)
+          branch="mx/$date"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git commit -am "MX check $date"
+          git push --force origin "$branch"
+          gh pr create --base main --head "$branch" --title "MX check $date" --body-file mx-report.md \
+            || gh pr edit "$branch" --body-file mx-report.md

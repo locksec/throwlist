@@ -1,0 +1,41 @@
+name: Release
+
+# Tags each change to the published files on main as a release named by the date the list
+# was built, such as v2026.10.08. A later change built on the same date, such as a monthly
+# MX check, gets v2026.10.08.2.
+
+on:
+  push:
+    branches: [main]
+    paths: [domains.txt, domains.json, allowlist.txt, relays.txt]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Tag and publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          base="v$(node -p "require('./domains.json').generated.replaceAll('-', '.')")"
+          count=$(node -p "require('./domains.json').count.toLocaleString('en-US')")
+          tag="$base"
+          n=2
+          while gh release view "$tag" >/dev/null 2>&1; do
+            tag="$base.$n"
+            n=$((n + 1))
+          done
+          if [ "$tag" = "$base" ]; then
+            notes=$(awk -v h="## $base" '$0 == h {seen=1; next} /^## /{if (seen) exit} seen' CHANGELOG.md | sed '/./,$!d')
+          fi
+          gh release create "$tag" --target "$GITHUB_SHA" --title "$tag" \
+            --notes "${notes:-$count domains.}" \
+            domains.txt domains.json allowlist.txt relays.txt

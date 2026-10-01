@@ -1,0 +1,94 @@
+Throwlist
+https://github.com/locksec/throwlist
+
+The code (src/, scripts/, test/ and the workflows) is under the MIT License in LICENSE.
+
+Throwlist's own data (observations.tsv, services.yml, allowlist.yml, relays.yml and the
+domains Throwlist itself observed) is dedicated to the public domain under CC0 1.0, in
+LICENSE-DATA.
+
+The published lists (domains.txt and domains.json) also contain domains from the open
+lists below. Each one's license allows redistribution, and its notice is kept here.
+sources.yml says how each is used.
+
+
+disposable-email-domains
+https://github.com/disposable-email-domains/disposable-email-domains
+CC0 1.0 Universal. No notice is required; it is credited here with thanks.
+
+
+FakeFilter
+https://github.com/7c/fakefilter
+
+BSD 3-Clause License
+
+Copyright (c) 2022, 7c
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its
+   contributors may be used to endorse or promote products derived from
+   this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+disposable/disposable-email-domains
+https://github.com/disposable/disposable-email-domains
+MIT License. Copyright (c) 2017 Andrei Simionescu. Copyright (c) 2017 Stefan Meinecke, greenSec GmbH.
+
+MailChecker
+https://github.com/FGRibreau/mailchecker
+MIT License. Copyright (c) 2013 Francois-Guillaume Ribreau.
+
+burner-email-providers
+https://github.com/wesbos/burner-email-providers
+MIT License. Copyright 2018 Wes Bos.
+
+disposable-email-domain-list
+https://github.com/unkn0w/disposable-email-domain-list
+MIT License. Copyright (c) 2022 Jakub 'unknow' Mrugalski.
+
+The MIT License text for these four:
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+Public Suffix List
+https://publicsuffix.org
+data/public_suffix_list.dat is under the Mozilla Public License 2.0
+(https://mozilla.org/MPL/2.0/), as its header says.
