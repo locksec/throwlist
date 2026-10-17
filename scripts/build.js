@@ -3,9 +3,11 @@
 // first to download the lists.
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { domainMap, loadAllowlist, loadRelays, loadSources } from '../src/config.js';
+import { applyMxToAdditions } from '../src/additions.js';
 import { merge } from '../src/merge.js';
+import { checkMx, DEFAULT_SERVERS } from '../src/mx.js';
 import { observationsAsSource, readObservations } from '../src/observations.js';
-import { readPaidHosts } from '../src/paidhosts.js';
+import { readPaidHosts, writePaidHosts } from '../src/paidhosts.js';
 import { parseFakefilter, parseJsonArray, parseLines, parseSourceMap } from '../src/parse.js';
 import { repoPath } from '../src/paths.js';
 import { loadPsl } from '../src/psl.js';
@@ -59,6 +61,7 @@ for (const source of sources) {
   }
 }
 
+const paidHosts = readPaidHosts();
 const result = merge({
   sources,
   current,
@@ -67,8 +70,20 @@ const result = merge({
   relays: domainMap(loadRelays()),
   psl: loadPsl(),
   today,
-  paidHosts: readPaidHosts(),
+  paidHosts,
 });
+
+// New domains get their mail-server check now rather than at the next monthly run, so
+// the paid-host rule applies before they are published and no new entry ships with an
+// unknown answer. Set THROWLIST_SKIP_MX=1 to build without network access.
+if (result.added.length && !process.env.THROWLIST_SKIP_MX) {
+  const servers = process.env.THROWLIST_DNS ? process.env.THROWLIST_DNS.split(',') : DEFAULT_SERVERS;
+  console.log(`Checking mail servers for ${result.added.length.toLocaleString('en-US')} new domains via ${servers.join(', ')}`);
+  const mx = await checkMx(result.added, { servers });
+  const held = applyMxToAdditions(result, mx, paidHosts, new Map(sources.map(s => [s.id, s])), today);
+  writePaidHosts(paidHosts);
+  if (held.length) console.log(`Held back ${held.length} new domains whose mail goes to a paid organization host.`);
+}
 
 const sourceCounts = { ...last.source_counts };
 for (const [id, n] of result.counts) sourceCounts[id] = n;
