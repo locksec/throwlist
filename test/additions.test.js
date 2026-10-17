@@ -52,10 +52,10 @@ test('a new domain on a paid organization host is held back unless a watching so
   assert.equal(r.listed.get('farm.xyz')?.mx, true);
   assert.equal(r.listed.get('quiet.example')?.mx, null, 'no answer leaves the entry as it was');
   assert.deepEqual(
-    [...paidHosts],
+    [...paidHosts].sort(([a], [b]) => a.localeCompare(b)),
     [
-      ['tenant.example', { host: 'Microsoft 365', checked: '2026-10-19' }],
       ['seen.example', { host: 'Google Workspace', checked: '2026-10-19' }],
+      ['tenant.example', { host: 'Microsoft 365', checked: '2026-10-19' }],
     ],
   );
 });
