@@ -71,7 +71,7 @@ Throwlist searches the web for temp mail services in 23 languages ("temp mail", 
 
 Eighteen services publish their domains openly and are read every week by ThrowlistBot, which follows robots.txt and each service's terms and makes one request per service.
 
-Throwlist also merges the established open lists credited below. Throwaway domains change hands, so a monthly check of every domain's mail servers finds those that have passed to a business or a person and takes them off. Each week's changes are reviewed before they are released.
+Throwlist also merges the established open lists credited below. Throwaway domains change hands, so a monthly check of every domain's mail servers finds those that have passed to a business or a person and takes them off, and a new domain's mail servers are checked the week it is added, so one that already belongs to a business is held back before it is published. Each week's changes are reviewed before they are released.
 
 ### domains.json
 
