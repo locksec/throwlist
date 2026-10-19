@@ -134,7 +134,7 @@
   terms: https://www.1secmail.cc/page/Terms-Conditions
   automated: not mentioned
   status: active
-  checked: 2026-10-12
+  checked: 2026-10-19
   notes: Successor-style site. Free domains listed in the select; five premium domains are shown masked (e.g. p*************d.com) and are excluded.
 - id: 1secmail.com
   name: 1secmail.com
@@ -406,7 +406,7 @@
   terms: https://cs.email/tos
   automated: not mentioned
   status: active
-  checked: 2026-10-12
+  checked: 2026-10-19
   notes: Runs the Guerrilla Mail software (assets served from guerrillamail.com). Domain select in the page HTML.
 - id: darkemail.school
   name: DarkEmail
@@ -431,7 +431,7 @@
   terms: https://delpost.ru/ru/page/faq-ru
   automated: not mentioned
   status: active
-  checked: 2026-10-12
+  checked: 2026-10-19
   notes: 30-minute boxes. Domain select on the custom-address page. No terms page; FAQ read instead.
 - id: disposablemail.app
   name: DisposableMail.app
@@ -496,7 +496,7 @@
   terms: null
   automated: unknown
   status: active
-  checked: 2026-10-12
+  checked: 2026-10-19
   notes: Open-source client with a mail.tm-compatible public API (no key). robots.txt is 404 on www and redirects to a login page on the API host. No terms link found.
 - id: email-fake.com
   name: Email-Fake
@@ -710,7 +710,7 @@
   terms: https://www.fakemailgenerator.com/privacy-policy/
   automated: not mentioned
   status: active
-  checked: 2026-10-12
+  checked: 2026-10-19
   notes: Domain menu lists 9 domains. No terms link. Domain dropdown in the page HTML. No terms page; privacy policy only.
 - id: freecustom.email
   name: FreeCustom.Email
@@ -778,7 +778,7 @@
   terms: https://getnada.net/terms
   automated: not mentioned
   status: active
-  checked: 2026-10-12
+  checked: 2026-10-19
   notes: Domain select in page HTML.
 - id: gmail.pm
   name: Gmail.pm
@@ -802,7 +802,7 @@
   terms: https://www.guerrillamail.com/tos
   automated: not mentioned
   status: active
-  checked: 2026-10-12
+  checked: 2026-10-19
   notes: Domain picker lists 11 domains. robots.txt is 404. Terms ban over-use by repeated requests but say nothing on bots. Domain select in the page HTML. Has a public JSON API, but it opens a session/mailbox, so it was not called.
 - id: haltospam.com
   name: HaltoSpam
@@ -1074,7 +1074,7 @@
   terms: https://mail.td/legal/terms
   automated: not mentioned
   status: active
-  checked: 2026-10-12
+  checked: 2026-10-19
   notes: Public domains endpoint on api.mail.td (no robots.txt there, 404). All listed domains are pro_only=false; qabq.com is the default. Account creation uses proof-of-work. Terms page linked but not fetched (request budget went to the API). Domain picker loads by script. Terms ban unauthorized automated sign-ups on third-party sites and enforce rate limits, but do not ban automated access as such. 7-day retention, paid API tiers.
 - id: mail.tm
   name: Mail.tm
@@ -1087,7 +1087,7 @@
   terms: null
   automated: unknown
   status: active
-  checked: 2026-10-12
+  checked: 2026-10-19
   notes: Documented public API lists one active public domain today (hydra:totalItems 1). No terms page linked (privacy only). Documented public API (docs.mail.tm); returned a single active domain. No terms link, only an FAQ.
 - id: mail.xiuvi.cn
   name: XIUVI Mail
@@ -1307,7 +1307,7 @@
   terms: https://mailtemp.uk/terms-and-conditions
   automated: not mentioned
   status: active
-  checked: 2026-10-12
+  checked: 2026-10-19
   notes: Domain list from the page state.
 - id: mailticking.com
   name: MailTicking
@@ -1419,7 +1419,7 @@
   terms: null
   automated: unknown
   status: active
-  checked: 2026-10-12
+  checked: 2026-10-19
   notes: Domain picker lists 6 domains. No terms link. Domain select in the page HTML; site says it changes domains periodically. No terms link found. First Arabic temp mail; 45-minute addresses. Domain select in the HTML. No terms link on the page.
 - id: mohmalmail.com
   name: MohmalMail
@@ -2175,7 +2175,7 @@
   terms: null
   automated: unknown
   status: active
-  checked: 2026-10-12
+  checked: 2026-10-19
   notes: Domain dropdown lists 9 domains. No terms page linked. Domain dropdown in the page HTML; mailto.plus is the default. No terms link found. Domain menu is in the page HTML. No terms page; privacy text is an in-page panel.
 - id: tempmail.ro
   name: TempMail.ro
@@ -2373,7 +2373,7 @@
   terms: null
   automated: unknown
   status: active
-  checked: 2026-10-12
+  checked: 2026-10-19
   notes: Documented public endpoint returns a random sample (max 50 per page); the full list (/api/all-domains/) needs a private token. Third-party data says about 41,600 domains, mostly user-added via MX. robots.txt is the HTML app shell. No terms page.
 - id: tmailor.com
   name: Tmailor
