@@ -2,6 +2,10 @@
 
 Each release is tagged with its date. Counts are domains in domains.txt.
 
+## v2026.10.26
+
+27,007 domains: 1,464 added, 182 removed.
+
 ## v2026.10.12
 
 25,725 domains: 1,039 added, 212 removed.
